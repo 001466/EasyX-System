@@ -8,6 +8,7 @@ import org.easy.user.entity.User;
 import org.easy.user.entity.UserInfo;
 import org.easy.user.vo.UserVO;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.cloud.openfeign.SpringQueryMap;
 import org.springframework.web.bind.annotation.*;
 
 import javax.management.Query;
@@ -28,5 +29,5 @@ public interface IUserFeign {
 
     @GetMapping("/list")
     @ApiOperation(value = "分页", notes = "传入user", position = 2)
-    public R<List<UserVO>> list(User user) ;
+    public R<List<UserVO>> list(@SpringQueryMap User user) ;
 }

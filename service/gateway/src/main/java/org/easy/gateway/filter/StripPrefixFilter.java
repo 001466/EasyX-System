@@ -51,7 +51,7 @@ public class StripPrefixFilter implements GlobalFilter, Ordered {
 				.collect(Collectors.joining("/"));
 		ServerHttpRequest newRequest = request.mutate().path(newPath).build();
 		exchange.getAttributes().put(GATEWAY_REQUEST_URL_ATTR, newRequest.getURI());
-		log.info("requestUri:{}",newRequest.getURI());
+		log.info(newRequest.getURI().getPath());
 		return chain.filter(exchange.mutate().request(newRequest.mutate().build()).build());
 	}
 
