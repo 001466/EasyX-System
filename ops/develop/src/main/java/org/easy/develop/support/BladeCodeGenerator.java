@@ -51,7 +51,7 @@ public class BladeCodeGenerator {
 	/**
 	 * 代码所在系统
 	 */
-	private String webName = SystemConstant.SWORD_NAME;
+	private String webName = "sword";
 	/**
 	 * 代码前端生成的地址
 	 */
