@@ -22,6 +22,8 @@ import io.swagger.annotations.ApiParam;
 import lombok.AllArgsConstructor;
 import javax.validation.Valid;
 
+import org.easy.cloud.annotation.UrlVersion;
+import org.easy.cloud.annotation.VersionMapping;
 import org.easy.mybatisplus.support.Condition;
 import org.easy.mybatisplus.support.Query;
 import org.easy.tool.web.R;
@@ -44,7 +46,7 @@ import java.util.List;
  */
 @RestController
 @AllArgsConstructor
-@RequestMapping("/dict")
+@VersionMapping("/dict")
 @Api(value = "字典管理", tags = "字典管理")
 public class DictController {
 
@@ -78,10 +80,22 @@ public class DictController {
 	* 自定义分页 
 	*/
 	@GetMapping("/page")
-	@ApiOperation(value = "分页", notes = "传入dict", position = 3)
+	@ApiOperation(value = "分页1", notes = "传入dict", position = 3)
+	@UrlVersion("v1")
 	public R<IPage<DictVO>> page(DictVO dict, Query query) {
 		IPage<DictVO> pages = dictService.selectDictPage(Condition.getPage(query), dict);
-		return R.success(pages);
+		return R.success(pages).setMessage("v1");
+	}
+
+	/**
+	 * 自定义分页
+	 */
+	@GetMapping("/page")
+	@ApiOperation(value = "分页2", notes = "传入dict", position = 3)
+	@UrlVersion("v2")
+	public R<IPage<DictVO>> page2(DictVO dict, Query query) {
+		IPage<DictVO> pages = dictService.selectDictPage(Condition.getPage(query), dict);
+		return R.success(pages).setMessage("v2");
 	}
 
 	/**
