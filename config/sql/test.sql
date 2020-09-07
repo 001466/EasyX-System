@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50730
 File Encoding         : 65001
 
-Date: 2020-09-03 17:52:00
+Date: 2020-09-07 11:03:19
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -44,7 +44,7 @@ CREATE TABLE `client` (
 -- ----------------------------
 -- Records of client
 -- ----------------------------
-INSERT INTO `client` VALUES ('21', 'gateway_fa', '{noop}gateway_fa', '', 'approve', 'refresh_token,password,authorization_code', 'http://192.168.9.54:8888/login/oauth2/code/okta', '', '1296000000', '1296000000', '', '', '1', '2019-11-11 10:11:46', '1', '2020-09-03 17:45:01', '1', '0');
+INSERT INTO `client` VALUES ('21', 'gateway_fa', '{noop}gateway_fa', '', 'approve', 'refresh_token,password,authorization_code', 'http://192.168.9.54:9999/login/oauth2/code/okta', '', '1296000000', '1296000000', '', '', '1', '2019-11-11 10:11:46', '1', '2020-09-03 17:45:01', '1', '0');
 
 -- ----------------------------
 -- Table structure for dict
@@ -65,6 +65,26 @@ CREATE TABLE `dict` (
 -- ----------------------------
 -- Records of dict
 -- ----------------------------
+INSERT INTO `dict` VALUES ('1', '0', 'sex', '0', '性别', '1', '性别', '0');
+INSERT INTO `dict` VALUES ('2', '1', 'sex', '1', '男', '1', '男', '0');
+INSERT INTO `dict` VALUES ('3', '1', 'sex', '2', '女', '2', '女', '0');
+INSERT INTO `dict` VALUES ('4', '0', 'notice', '0', '通知类型', '2', '通知类型', '0');
+INSERT INTO `dict` VALUES ('5', '4', 'notice', '1', '发布通知', '1', '发布通知', '0');
+INSERT INTO `dict` VALUES ('6', '4', 'notice', '2', '批转通知', '2', '批转通知', '0');
+INSERT INTO `dict` VALUES ('7', '4', 'notice', '3', '转发通知', '3', '转发通知', '0');
+INSERT INTO `dict` VALUES ('8', '4', 'notice', '4', '指示通知', '4', '指示通知', '0');
+INSERT INTO `dict` VALUES ('9', '4', 'notice', '5', '任免通知', '5', '任免通知', '0');
+INSERT INTO `dict` VALUES ('10', '4', 'notice', '6', '事务通知', '6', '事务通知', '0');
+INSERT INTO `dict` VALUES ('11', '0', 'menu_category', '0', '菜单类型', '3', '菜单类型', '0');
+INSERT INTO `dict` VALUES ('12', '11', 'menu_category', '1', '菜单', '1', '菜单', '0');
+INSERT INTO `dict` VALUES ('13', '11', 'menu_category', '2', '按钮', '2', '按钮', '0');
+INSERT INTO `dict` VALUES ('14', '0', 'button_func', '0', '按钮功能', '4', '按钮功能', '0');
+INSERT INTO `dict` VALUES ('15', '14', 'button_func', '1', '工具栏', '1', '工具栏', '0');
+INSERT INTO `dict` VALUES ('16', '14', 'button_func', '2', '操作栏', '2', '操作栏', '0');
+INSERT INTO `dict` VALUES ('17', '14', 'button_func', '3', '工具操作栏', '3', '工具操作栏', '0');
+INSERT INTO `dict` VALUES ('18', '0', 'yes_no', '0', '是否', '5', '是否', '0');
+INSERT INTO `dict` VALUES ('19', '18', 'yes_no', '1', '否', '1', '否', '0');
+INSERT INTO `dict` VALUES ('20', '18', 'yes_no', '2', '是', '2', '是', '0');
 
 -- ----------------------------
 -- Table structure for menu

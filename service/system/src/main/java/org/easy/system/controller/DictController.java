@@ -48,6 +48,7 @@ import java.util.List;
 @AllArgsConstructor
 @VersionMapping("/dict")
 @Api(value = "字典管理", tags = "字典管理")
+@UrlVersion("v1")
 public class DictController {
 
 	private IDictService dictService;
@@ -81,22 +82,20 @@ public class DictController {
 	*/
 	@GetMapping("/page")
 	@ApiOperation(value = "分页1", notes = "传入dict", position = 3)
-	@UrlVersion("v1")
 	public R<IPage<DictVO>> page(DictVO dict, Query query) {
 		IPage<DictVO> pages = dictService.selectDictPage(Condition.getPage(query), dict);
 		return R.success(pages).setMessage("v1");
 	}
 
-	/**
-	 * 自定义分页
-	 */
-	@GetMapping("/page")
-	@ApiOperation(value = "分页2", notes = "传入dict", position = 3)
-	@UrlVersion("v2")
-	public R<IPage<DictVO>> page2(DictVO dict, Query query) {
-		IPage<DictVO> pages = dictService.selectDictPage(Condition.getPage(query), dict);
-		return R.success(pages).setMessage("v2");
-	}
+//	/**
+//	 * 自定义分页
+//	 */
+//	@GetMapping("/page")
+//	@ApiOperation(value = "分页2", notes = "传入dict", position = 3)
+//	public R<IPage<DictVO>> page2(DictVO dict, Query query) {
+//		IPage<DictVO> pages = dictService.selectDictPage(Condition.getPage(query), dict);
+//		return R.success(pages).setMessage("v2");
+//	}
 
 	/**
 	* 新增 
