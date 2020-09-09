@@ -23,7 +23,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.client.WebClient;
 
 /**
- * @author Rob Winch
  * @since 5.1
  */
 @Configuration

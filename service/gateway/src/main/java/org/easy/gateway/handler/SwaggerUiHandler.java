@@ -35,7 +35,6 @@ import java.util.Optional;
 /**
  * SwaggerUiHandler
  *
- * @author lengleng
  */
 @Slf4j
 @Component

@@ -35,7 +35,6 @@ import java.util.Optional;
 /**
  * SwaggerSecurityHandler
  *
- * @author lengleng
  */
 @Slf4j
 @Component

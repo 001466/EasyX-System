@@ -38,7 +38,6 @@ import java.util.HashSet;
 /**
  * 用户信息
  *
- * @author Chill
  */
 @Slf4j
 @Service

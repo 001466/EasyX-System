@@ -22,7 +22,6 @@ import org.easy.develop.support.BladeCodeGenerator;
 /**
  * 代码生成器
  *
- * @author Chill
  */
 public class CodeGenerator {
 

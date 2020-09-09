@@ -31,7 +31,6 @@ import org.springframework.context.support.ReloadableResourceBundleMessageSource
 /**
  * 用户认证服务器
  *
- * @author Chill
  */
 @SpringBootApplication
 @Configuration

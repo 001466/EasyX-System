@@ -12,7 +12,6 @@ import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 
 
 /**
- * @author: 594781919@qq.com
  * @date: 2018/4/10
  */
 @Configuration

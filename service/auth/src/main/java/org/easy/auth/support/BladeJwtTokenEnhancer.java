@@ -32,7 +32,6 @@ import java.util.Map;
 /**
  * jwt返回参数增强
  *
- * @author Chill
  */
 @Slf4j
 public class BladeJwtTokenEnhancer implements TokenEnhancer {

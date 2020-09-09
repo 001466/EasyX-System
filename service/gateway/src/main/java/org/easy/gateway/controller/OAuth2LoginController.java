@@ -32,7 +32,6 @@ import springfox.documentation.annotations.ApiIgnore;
 import java.util.Map;
 
 /**
- * @author Rob Winch
  */
 @Controller
 @ApiIgnore

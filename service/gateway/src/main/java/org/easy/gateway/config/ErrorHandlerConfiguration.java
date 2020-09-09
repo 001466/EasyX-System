@@ -39,7 +39,6 @@ import java.util.List;
 /**
  * 异常处理配置类
  *
- * @author Chill
  */
 @Configuration
 @AutoConfigureBefore(ErrorWebFluxAutoConfiguration.class)

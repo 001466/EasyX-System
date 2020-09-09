@@ -28,7 +28,6 @@ import java.util.Map;
 /**
  * 自定义密码工厂
  *
- * @author Chill
  */
 public class BladePasswordEncoderFactories {
 

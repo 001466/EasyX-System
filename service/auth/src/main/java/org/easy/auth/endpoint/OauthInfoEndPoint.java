@@ -33,7 +33,6 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * BladeEndPoint
  *
- * @author Chill
  */
 @Slf4j
 @RestController

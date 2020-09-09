@@ -22,7 +22,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 /**
  * 自定义密码加密
  *
- * @author Chill
  */
 public class BladePasswordEncoder implements PasswordEncoder {
 

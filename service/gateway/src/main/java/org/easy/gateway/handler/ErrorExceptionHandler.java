@@ -33,7 +33,6 @@ import java.util.Map;
 /**
  * 异常处理
  *
- * @author Chill
  */
 @Slf4j
 public class ErrorExceptionHandler extends DefaultErrorWebExceptionHandler {

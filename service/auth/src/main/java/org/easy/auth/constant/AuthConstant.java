@@ -19,7 +19,6 @@ package org.easy.auth.constant;///*
 ///**
 // * 授权校验常量
 // *
-// * @author Chill
 // */
 //public interface AuthConstant {
 //

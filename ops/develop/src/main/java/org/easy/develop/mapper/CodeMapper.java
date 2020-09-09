@@ -22,7 +22,6 @@ import org.easy.develop.entity.Code;
 /**
  * Mapper 接口
  *
- * @author Chill
  */
 public interface CodeMapper extends BaseMapper<Code> {
 

@@ -26,7 +26,6 @@ import java.util.List;
 /**
  * 用户信息
  *
- * @author Chill
  */
 @Data
 @ApiModel(description = "用户信息")

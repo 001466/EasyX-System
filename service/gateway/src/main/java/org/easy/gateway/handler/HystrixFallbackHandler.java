@@ -30,7 +30,6 @@ import reactor.core.publisher.Mono;
 /**
  * Hystrix 降级处理
  *
- * @author lengleng
  */
 @Slf4j
 @Component

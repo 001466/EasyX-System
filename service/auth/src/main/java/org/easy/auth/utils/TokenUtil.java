@@ -30,7 +30,6 @@ import java.util.Calendar;
 /**
  * 认证工具类
  *
- * @author Chill
  */
 public class TokenUtil {
 

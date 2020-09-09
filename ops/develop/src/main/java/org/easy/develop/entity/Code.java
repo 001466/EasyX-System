@@ -29,7 +29,6 @@ import java.io.Serializable;
 /**
  * 实体类
  *
- * @author Chill
  */
 @Data
 @TableName("blade_code")

@@ -13,7 +13,6 @@ import org.springframework.context.annotation.Configuration;
 /**
  * swagger配置
  *
- * @author Chill
  */
 @Configuration
 @ImportAutoConfiguration({RibbonAutoConfiguration.class, FeignRibbonClientAutoConfiguration.class, FeignAutoConfiguration.class})

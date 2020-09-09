@@ -25,7 +25,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 /**
  * 用户启动器
  *
- * @author Chill
  */
 @SpringBootApplication
 @EnableCaching

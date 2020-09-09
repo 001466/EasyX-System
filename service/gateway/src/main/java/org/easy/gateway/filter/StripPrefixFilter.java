@@ -22,7 +22,6 @@ import static org.springframework.cloud.gateway.support.ServerWebExchangeUtils.a
  * <p>
  * 1. 对请求头中参数进行处理 from 参数进行清洗 2. 重写StripPrefix = 1,支持全局
  *
- * @author lengleng
  */
 @Component
 @Slf4j

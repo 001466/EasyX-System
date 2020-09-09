@@ -23,7 +23,6 @@ import org.easy.develop.entity.Code;
 /**
  * 服务类
  *
- * @author Chill
  */
 public interface ICodeService extends IService<Code> {
 

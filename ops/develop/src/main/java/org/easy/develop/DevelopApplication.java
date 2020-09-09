@@ -23,7 +23,6 @@ import org.springframework.cloud.client.SpringCloudApplication;
 /**
  * Develop启动器
  *
- * @author Chill
  */
 @SpringCloudApplication
 public class DevelopApplication {

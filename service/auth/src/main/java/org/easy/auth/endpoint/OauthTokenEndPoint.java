@@ -42,7 +42,6 @@ import java.util.HashMap;
 /**
  * BladeEndPoint
  *
- * @author Chill
  */
 @Slf4j
 @RestController

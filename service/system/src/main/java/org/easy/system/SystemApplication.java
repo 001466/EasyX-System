@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * 系统模块启动器
- * @author Chill
  */
 @SpringBootApplication
 @EnableTransactionManagement

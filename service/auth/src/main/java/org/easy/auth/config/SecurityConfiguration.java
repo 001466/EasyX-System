@@ -38,7 +38,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 /**
  * Security配置
  *
- * @author Chill
  */
 @Order(2)
 @Configuration

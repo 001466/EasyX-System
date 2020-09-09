@@ -27,7 +27,6 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 /**
  * 自定义登录成功配置
  *
- * @author Chill
  */
 
 @Order(6)

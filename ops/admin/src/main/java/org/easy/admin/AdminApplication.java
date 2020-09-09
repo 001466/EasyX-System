@@ -22,7 +22,6 @@ import org.springframework.cloud.client.SpringCloudApplication;
 /**
  * admin启动器
  *
- * @author Chill
  */
 @SpringCloudApplication
 public class AdminApplication {

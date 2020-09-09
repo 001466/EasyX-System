@@ -26,7 +26,6 @@ import java.util.Collection;
 /**
  * 用户信息拓展
  *
- * @author Chill
  */
 @Data
 public class BladeUserDetails extends User {

@@ -37,7 +37,6 @@ import java.util.Set;
 /**
  * 客户端信息
  *
- * @author Chill
  */
 @Slf4j
 public class BladeClientDetailsServiceImpl implements ClientDetailsService {

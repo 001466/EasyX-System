@@ -31,7 +31,6 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 /**
  * JwtTokenStore
  *
- * @author Chill
  */
 @Configuration
 
