@@ -20,8 +20,7 @@ package org.easy.auth.endpoint;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.easy.auth.service.BladeUserDetails;
-import org.easy.secure.BladeUser;
+import org.easy.auth.service.UserDetails;
 import org.springframework.http.MediaType;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -40,15 +39,15 @@ import javax.servlet.http.HttpServletResponse;
 public class OauthInfoEndPoint {
 
 	@RequestMapping(value = {"/oauth/user-info","/oauth/userinfo"},produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	public BladeUser currentUser(Authentication authentication, HttpServletRequest request, HttpServletResponse response) throws JsonProcessingException {
+	public org.easy.secure.User  currentUser(Authentication authentication, HttpServletRequest request, HttpServletResponse response) throws JsonProcessingException {
         if(authentication==null){
             return null;
         }
-	    BladeUserDetails principal = (BladeUserDetails) authentication.getPrincipal();
+	    UserDetails principal = (UserDetails) authentication.getPrincipal();
 		if(principal==null){
 		    return null;
         }
-		return principal.getBladeUser();
+		return principal.getUser();
 	}
 
 }

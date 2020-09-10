@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50730
 File Encoding         : 65001
 
-Date: 2020-09-07 11:03:19
+Date: 2020-09-10 11:29:22
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -144,4 +144,4 @@ CREATE TABLE `user` (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', 'admin', '{blade}90b9aa7e25f80cf4f64e990b78a9fc5ebd6cecad', '管理员', '管理员', 'admin@bladex.vip', '22233322', '2018-08-08 00:00:00', '1', '/atom-file/resource/仓井空/adc24597-9a93-4a11-82b5-64699a03a73b.png', '1', '1', '1', '0', '0', '0', '', '000000', '1', '2018-08-08 00:00:00', '-1', '2020-07-08 09:54:05');
+INSERT INTO `user` VALUES ('1', 'admin', '{ecx}90b9aa7e25f80cf4f64e990b78a9fc5ebd6cecad', '管理员', '管理员', 'admin@bladex.vip', '22233322', '2018-08-08 00:00:00', '1', '/atom-file/resource/仓井空/adc24597-9a93-4a11-82b5-64699a03a73b.png', '1', '1', '1', '0', '0', '0', '', '000000', '1', '2018-08-08 00:00:00', '-1', '2020-07-08 09:54:05');

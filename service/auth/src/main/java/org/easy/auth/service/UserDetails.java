@@ -14,40 +14,26 @@
  *  this software without specific prior written permission.
  *  Author: Chill 庄骞 (smallchill@163.com)
  */
-package org.easy.auth.support;
+package org.easy.auth.service;
 
-import org.springframework.security.crypto.password.PasswordEncoder;
+import lombok.Data;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.User;
+
+import java.util.Collection;
 
 /**
- * 无密码加密
+ * 用户信息拓展
  *
  */
-public class BladeNoOpPasswordEncoder implements PasswordEncoder {
+@Data
+public class UserDetails extends User {
 
-	@Override
-	public String encode(CharSequence rawPassword) {
-		String encode= rawPassword.toString();
-		return encode;
-	}
+	org.easy.secure.User user;
 
-	@Override
-	public boolean matches(CharSequence rawPassword, String encodedPassword) {
-		if( rawPassword.toString().equals(encodedPassword)){
-			return true;
-		}
-		return false;//throw new RuntimeException("密码不正确");
-	}
-
-	/**
-	 * Get the singleton {@link BladeNoOpPasswordEncoder}.
-	 */
-	public static PasswordEncoder getInstance() {
-		return INSTANCE;
-	}
-
-	private static final PasswordEncoder INSTANCE = new BladeNoOpPasswordEncoder();
-
-	private BladeNoOpPasswordEncoder() {
+	UserDetails(org.easy.secure.User user, String account, String password, boolean enabled, boolean accountNonExpired, boolean credentialsNonExpired, boolean accountNonLocked, Collection<? extends GrantedAuthority> authorities) {
+		super(account, password, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked, authorities);
+		this.user=user;
 	}
 
 }

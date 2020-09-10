@@ -21,7 +21,7 @@ package org.easy.auth.endpoint;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-import org.easy.auth.service.BladeUserDetails;
+import org.easy.auth.service.UserDetails;
 import org.easy.auth.utils.TokenUtil;
 import org.easy.tool.util.JsonUtil;
 import org.easy.tool.util.WebUtil;
@@ -56,7 +56,7 @@ public class OauthTokenEndPoint {
 	@RequestMapping(value = {"/oauth/token/create"})
 	public void currentUser(Authentication authentication, HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-		BladeUserDetails principal = (BladeUserDetails) authentication.getPrincipal();
+		UserDetails principal = (UserDetails) authentication.getPrincipal();
 		String[] tokens = TokenUtil.extractAndDecodeHeader();
 		assert tokens.length == 2;
 		String clientId = tokens[0];

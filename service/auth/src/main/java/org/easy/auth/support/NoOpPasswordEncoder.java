@@ -16,27 +16,38 @@
  */
 package org.easy.auth.support;
 
-import org.easy.tool.util.DigestUtil;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 /**
- * 自定义密码加密
+ * 无密码加密
  *
  */
-public class BladePasswordEncoder implements PasswordEncoder {
+public class NoOpPasswordEncoder implements PasswordEncoder {
 
 	@Override
 	public String encode(CharSequence rawPassword) {
-		String encode =DigestUtil.encrypt((String) rawPassword);
+		String encode= rawPassword.toString();
 		return encode;
 	}
 
 	@Override
 	public boolean matches(CharSequence rawPassword, String encodedPassword) {
-		if(encodedPassword.equals(encode(rawPassword))){
+		if( rawPassword.toString().equals(encodedPassword)){
 			return true;
 		}
 		return false;//throw new RuntimeException("密码不正确");
+	}
+
+	/**
+	 * Get the singleton {@link NoOpPasswordEncoder}.
+	 */
+	public static PasswordEncoder getInstance() {
+		return INSTANCE;
+	}
+
+	private static final PasswordEncoder INSTANCE = new NoOpPasswordEncoder();
+
+	private NoOpPasswordEncoder() {
 	}
 
 }

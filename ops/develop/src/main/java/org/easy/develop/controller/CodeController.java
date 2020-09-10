@@ -21,7 +21,7 @@ import io.swagger.annotations.*;
 import lombok.AllArgsConstructor;
 import org.easy.develop.entity.Code;
 import org.easy.develop.service.ICodeService;
-import org.easy.develop.support.BladeCodeGenerator;
+import org.easy.develop.support.CodeGenerator;
 import org.easy.mybatisplus.support.Condition;
 import org.easy.mybatisplus.support.Query;
 import org.easy.tool.util.Func;
@@ -97,7 +97,7 @@ public class CodeController {
 	public R genCode(@ApiParam(value = "主键集合", required = true) @RequestParam String ids, @RequestParam(defaultValue = "sword") String system) {
 		Collection<Code> codes = codeService.listByIds(Func.toIntList(ids));
 		codes.forEach(code -> {
-			BladeCodeGenerator generator = new BladeCodeGenerator();
+			CodeGenerator generator = new CodeGenerator();
 			generator.setWebName(system);
 			generator.setServiceName(code.getServiceName());
 			generator.setCodeName(code.getCodeName());

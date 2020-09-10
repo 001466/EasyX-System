@@ -2,7 +2,7 @@ package org.easy.auth.handler;
 
 
 import lombok.extern.slf4j.Slf4j;
-import org.easy.auth.service.BladeUserDetails;
+import org.easy.auth.service.UserDetails;
 import org.easy.auth.utils.TokenUtil;
 import org.easy.tool.util.JsonUtil;
 import org.easy.tool.util.SpringUtil;
@@ -48,7 +48,7 @@ public class MobileLoginSuccessHandler extends SavedRequestAwareAuthenticationSu
 
         if(WebUtil.isMobile(request)||(client_id!=null && (client_id.toLowerCase().equals("ios")||client_id.toLowerCase().equals("android")))){
 
-            BladeUserDetails principal = (BladeUserDetails) authentication.getPrincipal();
+            UserDetails principal = (UserDetails) authentication.getPrincipal();
 
 
             ClientDetails clientDetails = clientDetailsService.loadClientByClientId(client_id);

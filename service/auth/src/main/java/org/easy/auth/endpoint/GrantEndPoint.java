@@ -12,7 +12,7 @@ import java.util.Map;
 @Controller
 @SessionAttributes("authorizationRequest")
 
-public class DeoceanGrantEndPoint {
+public class GrantEndPoint {
 	@RequestMapping("/oauth/confirm_access")
 	public ModelAndView getAccessConfirmation(Map<String, Object> model, HttpServletRequest request) throws Exception {
 		AuthorizationRequest authorizationRequest = (AuthorizationRequest) model.get("authorizationRequest");

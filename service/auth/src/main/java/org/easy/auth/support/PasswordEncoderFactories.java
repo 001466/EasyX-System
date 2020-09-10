@@ -18,7 +18,6 @@ package org.easy.auth.support;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.DelegatingPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder;
 import org.springframework.security.crypto.scrypt.SCryptPasswordEncoder;
 
@@ -29,7 +28,7 @@ import java.util.Map;
  * 自定义密码工厂
  *
  */
-public class BladePasswordEncoderFactories {
+public class PasswordEncoderFactories {
 
 	/**
 	 * Creates a {@link DelegatingPasswordEncoder} with default mappings. Additional
@@ -38,29 +37,33 @@ public class BladePasswordEncoderFactories {
 	 * updates should not impact users. The mappings current are:
 	 *
 	 * <ul>
-	 * <li>blade - {@link BladePasswordEncoder} (sha1(md5("password")))</li>
+	 * <li>blade - {@link PasswordEncoder} (sha1(md5("password")))</li>
 	 * <li>bcrypt - {@link BCryptPasswordEncoder} (Also used for encoding)</li>
-	 * <li>noop - {@link BladeNoOpPasswordEncoder}</li>
+	 * <li>noop - {@link NoOpPasswordEncoder}</li>
 	 * <li>pbkdf2 - {@link Pbkdf2PasswordEncoder}</li>
 	 * <li>scrypt - {@link SCryptPasswordEncoder}</li>
 	 * </ul>
 	 *
-	 * @return the {@link PasswordEncoder} to use
+	 * @return the {@link org.springframework.security.crypto.password.PasswordEncoder} to use
 	 */
 	@SuppressWarnings("deprecation")
-	public static PasswordEncoder createDelegatingPasswordEncoder() {
+	public static org.springframework.security.crypto.password.PasswordEncoder createDelegatingPasswordEncoder() {
 		String encodingId = "noop";
-		Map<String, PasswordEncoder> encoders = new HashMap<>(16);
-		encoders.put("blade", new BladePasswordEncoder());
+		Map<String, org.springframework.security.crypto.password.PasswordEncoder> encoders = new HashMap<>(16);
+//		encoders.put("blade", new PasswordEncoder());
+		encoders.put("easyx", new PasswordEncoder());
+		encoders.put("easy", new PasswordEncoder());
+		encoders.put("ecx", new PasswordEncoder());
+		encoders.put("ec", new PasswordEncoder());
 		encoders.put("bcrypt", new BCryptPasswordEncoder());
-		encoders.put("noop", BladeNoOpPasswordEncoder.getInstance());
+		encoders.put("noop", NoOpPasswordEncoder.getInstance());
 		encoders.put("pbkdf2", new Pbkdf2PasswordEncoder());
 		encoders.put("scrypt", new SCryptPasswordEncoder());
 
 		return new DelegatingPasswordEncoder(encodingId, encoders);
 	}
 
-	private BladePasswordEncoderFactories() {
+	private PasswordEncoderFactories() {
 	}
 
 }

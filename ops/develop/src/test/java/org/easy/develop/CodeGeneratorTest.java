@@ -17,13 +17,11 @@
 package org.easy.develop;
 
 
-import org.easy.develop.support.BladeCodeGenerator;
-
 /**
  * 代码生成器
  *
  */
-public class CodeGenerator {
+public class CodeGeneratorTest {
 
 	/**
 	 * 代码生成的模块名
@@ -80,7 +78,7 @@ public class CodeGenerator {
 	 * RUN THIS
 	 */
 	public static void main(String[] args) {
-		BladeCodeGenerator generator = new BladeCodeGenerator();
+		org.easy.develop.support.CodeGenerator generator = new org.easy.develop.support.CodeGenerator();
 
 		generator.setCodeName(JAVA_CODE_NAME);
 		generator.setServiceName(JAVA_SERVICE_NAME);

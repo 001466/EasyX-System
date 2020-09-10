@@ -17,7 +17,7 @@
 package org.easy.auth.support;
 
 import lombok.extern.slf4j.Slf4j;
-import org.easy.auth.service.BladeUserDetails;
+import org.easy.auth.service.UserDetails;
 import org.easy.secure.constant.TokenConstant;
 import org.easy.tool.util.BeanUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,15 +34,15 @@ import java.util.Map;
  *
  */
 @Slf4j
-public class BladeJwtTokenEnhancer implements TokenEnhancer {
+public class JwtTokenEnhancer implements TokenEnhancer {
 
 	@Autowired
 	AuthorizationCodeServices authorizationCodeServices;
 
 	@Override
 	public OAuth2AccessToken enhance(OAuth2AccessToken accessToken, OAuth2Authentication authentication) {
-		BladeUserDetails principal = (BladeUserDetails) authentication.getUserAuthentication().getPrincipal();
-		Map<String, Object> additionalInfo=BeanUtil.toMap(principal.getBladeUser());
+		UserDetails principal = (UserDetails) authentication.getUserAuthentication().getPrincipal();
+		Map<String, Object> additionalInfo=BeanUtil.toMap(principal.getUser());
 
 		additionalInfo.put(TokenConstant.AUTHORIZATION_CODE,authorizationCodeServices.createAuthorizationCode(authentication));
 		((DefaultOAuth2AccessToken) accessToken).setAdditionalInformation(additionalInfo);

@@ -16,7 +16,7 @@
  */
 package org.easy.auth.config;
 
-import org.easy.auth.support.BladeJwtTokenEnhancer;
+import org.easy.auth.support.JwtTokenEnhancer;
 import org.easy.secure.constant.TokenConstant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -73,7 +73,7 @@ public class JwtTokenStoreConfiguration {
 	@Bean
 	@ConditionalOnMissingBean(name = "jwtTokenEnhancer")
 	public TokenEnhancer jwtTokenEnhancer() {
-		return new BladeJwtTokenEnhancer();
+		return new JwtTokenEnhancer();
 	}
 
 }

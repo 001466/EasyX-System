@@ -10,7 +10,7 @@ import java.io.*;
 import java.util.concurrent.TimeUnit;
 
 @Service
-public class MyAuthorizationCodeServices extends InMemoryAuthorizationCodeServices {
+public class AuthorizationCodeServices extends InMemoryAuthorizationCodeServices {
 	
 	@Autowired
 	RedisTemplate redisTemplate;

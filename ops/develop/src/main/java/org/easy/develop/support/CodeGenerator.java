@@ -46,7 +46,7 @@ import java.util.*;
  */
 @Data
 @Slf4j
-public class BladeCodeGenerator {
+public class CodeGenerator {
 	/**
 	 * 代码所在系统
 	 */

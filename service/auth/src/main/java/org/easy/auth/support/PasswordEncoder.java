@@ -14,27 +14,28 @@
  *  this software without specific prior written permission.
  *  Author: Chill 庄骞 (smallchill@163.com)
  */
-package org.easy.auth.service;
+package org.easy.auth.support;
 
-import lombok.Data;
-import org.easy.secure.BladeUser;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.User;
-
-import java.util.Collection;
+import org.easy.tool.util.DigestUtil;
 
 /**
- * 用户信息拓展
+ * 自定义密码加密
  *
  */
-@Data
-public class BladeUserDetails extends User {
+public class PasswordEncoder implements org.springframework.security.crypto.password.PasswordEncoder {
 
-	BladeUser bladeUser;
+	@Override
+	public String encode(CharSequence rawPassword) {
+		String encode =DigestUtil.encrypt((String) rawPassword);
+		return encode;
+	}
 
-	BladeUserDetails(BladeUser bladeUser,String account, String password, boolean enabled, boolean accountNonExpired, boolean credentialsNonExpired, boolean accountNonLocked, Collection<? extends GrantedAuthority> authorities) {
-		super(account, password, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked, authorities);
-		this.bladeUser=bladeUser;
+	@Override
+	public boolean matches(CharSequence rawPassword, String encodedPassword) {
+		if(encodedPassword.equals(encode(rawPassword))){
+			return true;
+		}
+		return false;//throw new RuntimeException("密码不正确");
 	}
 
 }

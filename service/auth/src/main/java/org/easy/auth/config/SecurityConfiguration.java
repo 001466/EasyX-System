@@ -21,7 +21,7 @@ import lombok.SneakyThrows;
 import org.easy.auth.handler.MobileLoginFailureHandler;
 import org.easy.auth.handler.MobileLoginSuccessHandler;
 import org.easy.auth.handler.RedisTokenLogoutSuccessHandler;
-import org.easy.auth.support.BladePasswordEncoderFactories;
+import org.easy.auth.support.PasswordEncoderFactories;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -76,7 +76,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return BladePasswordEncoderFactories.createDelegatingPasswordEncoder();
+        return PasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
 
 

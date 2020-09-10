@@ -39,11 +39,11 @@ import java.util.Set;
  *
  */
 @Slf4j
-public class BladeClientDetailsServiceImpl implements ClientDetailsService {
+public class ClientDetailsServiceImpl implements ClientDetailsService {
 
 	IClientFeign iClientFeign;
 
-	public BladeClientDetailsServiceImpl(IClientFeign iClientFeign){
+	public ClientDetailsServiceImpl(IClientFeign iClientFeign){
 		this.iClientFeign=iClientFeign;
 	}
 

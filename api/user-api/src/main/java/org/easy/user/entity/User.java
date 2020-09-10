@@ -93,14 +93,14 @@ public class User extends BaseEntity {
      */
     @ApiModelProperty(value = "是否已删除")
     private Integer enabled;
-  private Integer locked;
-  private Integer expired;
+    private Integer locked;
+    private Integer expired;
     /**
      * 0为用户；1为员工
      */
     @ApiModelProperty(value = "0为用户；1为员工")
     private Integer type;
-  private String path;
+    private String path;
 
 
 }

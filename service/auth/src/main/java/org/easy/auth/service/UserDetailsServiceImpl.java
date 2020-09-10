@@ -20,7 +20,6 @@ package org.easy.auth.service;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.easy.auth.utils.TokenUtil;
-import org.easy.secure.BladeUser;
 import org.easy.secure.exception.UserNotFoundException;
 import org.easy.tool.util.Func;
 import org.easy.tool.web.R;
@@ -29,7 +28,6 @@ import org.easy.user.entity.User;
 import org.easy.user.entity.UserInfo;
 import org.easy.user.feign.IUserFeign;
 import org.springframework.security.core.authority.AuthorityUtils;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 
@@ -42,12 +40,12 @@ import java.util.HashSet;
 @Slf4j
 @Service
 @AllArgsConstructor
-public class BladeUserDetailsServiceImpl implements UserDetailsService {
+public class UserDetailsServiceImpl implements UserDetailsService {
 
 	private IUserFeign iUserFeign;
 
 	@Override
-	public UserDetails loadUserByUsername(String account) {
+	public org.springframework.security.core.userdetails.UserDetails loadUserByUsername(String account) {
 
 
 		R<UserInfo> result = iUserFeign.loadUserByUsername(account);
@@ -56,9 +54,9 @@ public class BladeUserDetailsServiceImpl implements UserDetailsService {
 			throw new UserNotFoundException(ResultCode.USER_NOT_FOUND);
 		}
 		UserInfo userInfo = result.getData();
-		User user=userInfo.getUser();
-		BladeUser bladeUser=new BladeUser(TokenUtil.getClientIdFromHeader(),null,user.getId(),user.getName(),user.getNickName(),account,user.getRoleId(),Func.join(result.getData().getRoles()),user.getAvatar(),user.getType(),new HashSet<>( userInfo.getPermissions()),user.getPath());
-		return new BladeUserDetails(bladeUser,account, user.getPassword(), user.getEnabled()==0?false:true, user.getExpired()==0?true:false, user.getExpired()==0?true:false, user.getLocked()==0?true:false,AuthorityUtils.commaSeparatedStringToAuthorityList(Func.join(result.getData().getPermissions())));
+		User originUser=userInfo.getUser();
+		org.easy.secure.User authorizedUser=new org.easy.secure.User(TokenUtil.getClientIdFromHeader(),null,originUser.getId(),originUser.getName(),originUser.getNickName(),account,originUser.getRoleId(),Func.join(result.getData().getRoles()),originUser.getAvatar(),originUser.getType(),new HashSet<>( userInfo.getPermissions()),originUser.getPath());
+		return new UserDetails(authorizedUser,account, originUser.getPassword(), originUser.getEnabled()==0?false:true, originUser.getExpired()==0?true:false, originUser.getExpired()==0?true:false, originUser.getLocked()==0?true:false,AuthorityUtils.commaSeparatedStringToAuthorityList(Func.join(result.getData().getPermissions())));
 
 	}
 

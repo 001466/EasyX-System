@@ -33,7 +33,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 @Configuration
 @AllArgsConstructor
 @EnableResourceServer
-public class BladeResourceServerConfiguration extends ResourceServerConfigurerAdapter {
+public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter {
 
 	@Override
 	@SneakyThrows

@@ -19,7 +19,7 @@ package org.easy.auth.config;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 
-import org.easy.auth.service.BladeClientDetailsServiceImpl;
+import org.easy.auth.service.ClientDetailsServiceImpl;
 import org.easy.system.feign.IClientFeign;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -51,7 +51,7 @@ import java.util.List;
 @Configuration
 @AllArgsConstructor
 @EnableAuthorizationServer
-public class BladeAuthorizationServerConfiguration extends AuthorizationServerConfigurerAdapter {
+public class AuthorizationServerConfiguration extends AuthorizationServerConfigurerAdapter {
 
 	//private final DataSource dataSource;
 
@@ -117,7 +117,7 @@ public class BladeAuthorizationServerConfiguration extends AuthorizationServerCo
 	@Override
 	@SneakyThrows
 	public void configure(ClientDetailsServiceConfigurer clients) {
-		clients.withClientDetails(new BladeClientDetailsServiceImpl(iClientFeign));
+		clients.withClientDetails(new ClientDetailsServiceImpl(iClientFeign));
 	}
 
 	@Override

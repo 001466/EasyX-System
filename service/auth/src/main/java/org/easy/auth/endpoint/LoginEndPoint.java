@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 
-public class DeoceanLoginEndPoint {
+public class LoginEndPoint {
 
 	@GetMapping("/auth/login")
 	public String loginPage1() {
