@@ -11,6 +11,7 @@
         <module name="auth" />
         <module name="auth-api" />
         <module name="develop" />
+        <module name="example" />
         <module name="gateway" />
         <module name="system" />
         <module name="system-api" />
@@ -18,5 +19,8 @@
         <module name="user-api" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="example" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

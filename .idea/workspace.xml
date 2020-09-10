@@ -3,29 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d7ef9ad6-a2b8-403f-b3f2-c7308c99cc74" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/user-api/src/main/java/org/easy/user/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/user-api/src/main/java/org/easy/user/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/nacos/nacos_config_export_2020-09-07 11_02_13.zip" beforeDir="false" afterPath="$PROJECT_DIR$/config/nacos/nacos_config_export_2020-09-07 11_02_13.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/sql/test.sql" beforeDir="false" afterPath="$PROJECT_DIR$/config/sql/test.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/develop/src/main/java/org/easy/develop/controller/CodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/src/main/java/org/easy/develop/controller/CodeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/develop/src/main/java/org/easy/develop/support/BladeCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/src/main/java/org/easy/develop/support/CodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/develop/src/test/java/org/easy/develop/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/src/test/java/org/easy/develop/CodeGeneratorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/BladeAuthorizationServerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/AuthorizationServerConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/BladeResourceServerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/ResourceServerConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/JwtTokenStoreConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/JwtTokenStoreConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/endpoint/DeoceanGrantEndPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/endpoint/GrantEndPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/endpoint/DeoceanLoginEndPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/endpoint/LoginEndPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/endpoint/OauthInfoEndPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/endpoint/OauthInfoEndPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/endpoint/OauthTokenEndPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/endpoint/OauthTokenEndPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/handler/MobileLoginSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/handler/MobileLoginSuccessHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/service/BladeClientDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/service/ClientDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/service/BladeUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/service/UserDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/service/BladeUserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/service/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/service/MyAuthorizationCodeServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/service/AuthorizationCodeServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/support/BladeJwtTokenEnhancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/support/JwtTokenEnhancer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/support/BladeNoOpPasswordEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/support/NoOpPasswordEncoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/support/BladePasswordEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/support/PasswordEncoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/support/BladePasswordEncoderFactories.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/support/PasswordEncoderFactories.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -52,7 +29,26 @@
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="PasswordEncoder.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/support/PasswordEncoder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PasswordEncoderFactories.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/support/PasswordEncoderFactories.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="370">
+              <caret line="54" column="42" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -188,62 +184,6 @@
             <path>
               <item name="EasyX-System" type="b2602c69:ProjectViewProjectNode" />
               <item name="EasyX-System" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EasyX-System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EasyX-System" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EasyX-System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EasyX-System" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EasyX-System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EasyX-System" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EasyX-System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EasyX-System" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EasyX-System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EasyX-System" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EasyX-System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EasyX-System" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EasyX-System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EasyX-System" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="support" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -438,9 +378,9 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32900432" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.47402596" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.47402596" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.495671" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29317698" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29317698" />
       <window_info anchor="bottom" id="Problems" order="12" weight="0.32900432" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -455,7 +395,7 @@
     <layout-to-restore>
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.4047619" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.47402596" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -463,14 +403,14 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="JRebel" order="5" side_tool="true" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.495671" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.495671" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Problems" order="12" weight="0.32900432" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32900432" />
-      <window_info anchor="right" id="Maven Projects" order="5" visible="true" weight="0.21428572" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.21428572" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="JRebel Executor" order="10" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29317698" />
@@ -836,17 +776,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/support/PasswordEncoder.java">
+    <entry file="file://$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/support/PasswordEncoderFactories.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        <state relative-caret-position="370">
+          <caret line="54" column="42" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/support/PasswordEncoderFactories.java">
+    <entry file="file://$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/support/PasswordEncoder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="52" column="45" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
+        <state relative-caret-position="375">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
         </state>
       </provider>
     </entry>

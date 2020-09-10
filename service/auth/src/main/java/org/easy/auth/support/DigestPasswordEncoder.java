@@ -22,7 +22,7 @@ import org.easy.tool.util.DigestUtil;
  * 自定义密码加密
  *
  */
-public class PasswordEncoder implements org.springframework.security.crypto.password.PasswordEncoder {
+public class DigestPasswordEncoder implements org.springframework.security.crypto.password.PasswordEncoder {
 
 	@Override
 	public String encode(CharSequence rawPassword) {
