@@ -5,8 +5,6 @@ server:
 spring:
   application:
     name: system
-#  profiles:
-#    active: 111
   cloud:
     nacos:
       config:

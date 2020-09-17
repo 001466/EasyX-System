@@ -36,6 +36,14 @@
         <spring.cloud.version>Greenwich.SR1</spring.cloud.version>
         <spring.platform.version>Cairo-SR7</spring.platform.version>
 
+
+        <docker.registry.url>47.108.150.218</docker.registry.url>
+        <docker.registry.host>http://${docker.registry.url}:5000</docker.registry.host>
+        <docker.username>EasyX</docker.username>
+        <docker.password>000</docker.password>
+        <docker.namespace>system</docker.namespace>
+        <docker.plugin.version>1.4.13</docker.plugin.version>
+
     </properties>
 
     <dependencies>
