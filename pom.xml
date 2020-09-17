@@ -108,6 +108,32 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.1.0</version>
             </plugin>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>dockerfile-maven-plugin</artifactId>
+                <version>${docker.plugin.version}</version>
+                <configuration>
+                    <username>${docker.username}</username>
+                    <password>${docker.password}</password>
+                    <repository>${docker.registry.url}/${docker.namespace}/${project.artifactId}</repository>
+                    <tag>${project.version}</tag>
+                    <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
+                    <buildArgs>
+                        <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+                    </buildArgs>
+                </configuration>
+                <!--子服务添加如下配置，运行 mvn deploy 命令便会自动打包镜像-->
+                <!--<executions>
+                    <execution>
+                        <id>default</id>
+                        <goals>
+                            <goal>build</goal>
+                            <goal>push</goal>
+                        </goals>
+                    </execution>
+                </executions>-->
+            </plugin>
+
             <!-- 打source包 -->
             <!--<plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-source-plugin</artifactId>
                 <version>3.0.1</version> <configuration> <attach>true</attach> </configuration>

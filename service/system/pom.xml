@@ -65,6 +65,17 @@
                     </buildArgs>
                     <skip>false</skip>
                 </configuration>
+                <executions>
+                    <!--运行 mvn deploy 命令便会自动打包镜像-->
+                    <execution>
+                        <id>default</id>
+                        <goals>
+                            <goal>build</goal>
+                            <goal>push</goal>
+                        </goals>
+                    </execution>
+                </executions>
+
             </plugin>
         </plugins>
     </build>
