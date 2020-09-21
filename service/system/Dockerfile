@@ -2,9 +2,7 @@ FROM adoptopenjdk/openjdk8-openj9:alpine-slim
 
 MAINTAINER lijianfa1985@163.com
 
-RUN mkdir -p /blade/system
-
-WORKDIR /blade/system
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' >/etc/timezone
 
 EXPOSE 8001
 
