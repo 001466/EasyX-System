@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiParam;
 import lombok.AllArgsConstructor;
 import javax.validation.Valid;
 
-import org.easy.cloud.annotation.UrlVersion;
+import org.easy.cloud.annotation.PathVersion;
 import org.easy.cloud.annotation.VersionMapping;
 import org.easy.mybatisplus.support.Condition;
 import org.easy.mybatisplus.support.Query;
@@ -48,7 +48,7 @@ import java.util.List;
 @AllArgsConstructor
 @VersionMapping("/dict")
 @Api(value = "字典管理", tags = "字典管理")
-@UrlVersion("v1")
+@PathVersion("v1")
 public class DictController {
 
 	private IDictService dictService;
