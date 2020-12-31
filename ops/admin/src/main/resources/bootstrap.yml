@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: 1999
   undertow:
     # 设置IO线程数, 它主要执行非阻塞的任务,它们会负责多个连接, 默认设置每个CPU核心一个线程
     io-threads: 4
@@ -16,14 +16,14 @@ spring:
       discovery:
         ignored-services: consul
   application:
-    name: sys-admin
+    name: admin
 #  profiles:
 #    active: 111
   cloud:
     nacos:
       config:
-        shared-dataids: zipkin.yaml,management.yaml,logging.yaml,sentinel.yaml,hystrix.yaml
-        refreshable-dataids: zipkin.yaml,logging.yaml,sentinel.yaml,hystrix.yaml
+        shared-dataids: zipkin.yaml,management.yaml,logging.yaml,sentinel.yaml,hystrix.yaml,quartz.yaml
+#        refreshable-dataids: zipkin.yaml,logging.yaml,sentinel.yaml,hystrix.yaml
         ext-config:
           - {data-id: admin.yaml,group: DEFAULT_GROUP,refresh: true}
 

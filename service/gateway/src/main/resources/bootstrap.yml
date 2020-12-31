@@ -1,6 +1,6 @@
 
 server:
-  port: 9999
+  port: 1000
 
 spring:
   security:

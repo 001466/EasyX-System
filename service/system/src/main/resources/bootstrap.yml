@@ -1,6 +1,6 @@
 #服务器端口
 server:
-  port: 8001
+  port: 1001
 
 spring:
   application:
@@ -9,9 +9,8 @@ spring:
     nacos:
       config:
         shared-dataids: zipkin.yaml,management.yaml,logging.yaml,sentinel.yaml,hystrix.yaml
-        refreshable-dataids: zipkin.yaml,logging.yaml,sentinel.yaml,hystrix.yaml,blade.yaml
         ext-config:
-          - {data-id: blade.yaml,group: DEFAULT_GROUP,refresh: true}
+          - {data-id: main.yaml,group: DEFAULT_GROUP,refresh: true}
 
 
 #mybatis:
@@ -51,10 +50,6 @@ swagger:
   title: SYSTEM
   base-packages:
     - org.easy.system.controller
-
-info:
-  version: 2.0.0
-  desc: ${spring.application.name}
 
 
 

@@ -1,0 +1,29 @@
+#服务器端口
+server:
+  port: 1004
+
+spring:
+  profiles:
+    active: test
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Chongqing
+    default-property-inclusion: NON_NULL
+    serialization-inclusion: NON_NULL
+  application:
+    name: notify
+  cloud:
+    nacos:
+      config:
+        shared-dataids: zipkin.yaml,management.yaml,logging.yaml,sentinel.yaml,hystrix.yaml,jackson.yaml,mqtt.yaml,quartz.yaml
+        ext-config:
+          - {data-id: notify.yaml,group: DEFAULT_GROUP,refresh: true}
+
+
+swagger:
+  title: NOTIFY
+  base-packages:
+    - org.easy.notify.controller
+
+
+

@@ -16,6 +16,9 @@
         <module>user</module>
         <module>auth</module>
         <module>gateway</module>
+        <module>word</module>
+        <module>order</module>
+        <module>notify</module>
     </modules>
 
 

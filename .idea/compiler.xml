@@ -13,10 +13,13 @@
         <module name="develop" />
         <module name="example" />
         <module name="gateway" />
+        <module name="notify" />
+        <module name="order" />
         <module name="system" />
         <module name="system-api" />
         <module name="user" />
         <module name="user-api" />
+        <module name="word" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

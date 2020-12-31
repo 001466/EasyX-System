@@ -1,0 +1,11 @@
+INSERT INTO `menu`(`parent_id`, `code`, `name`, `alias`, `path`, `source`, `sort`, `category`, `action`, `is_open`, `remark`, `is_deleted`)
+VALUES (0, 'worddict', '花样文字', 'menu', '/word/worddict', NULL, 1, 1, 0, 1, NULL, 0);
+set @parentid = (SELECT LAST_INSERT_ID());
+INSERT INTO `menu`(`parent_id`, `code`, `name`, `alias`, `path`, `source`, `sort`, `category`, `action`, `is_open`, `remark`, `is_deleted`)
+VALUES (@parentid, 'worddict_add', '新增', 'add', '/word/worddict/add', 'plus', 1, 2, 1, 1, NULL, 0);
+INSERT INTO `menu`(`parent_id`, `code`, `name`, `alias`, `path`, `source`, `sort`, `category`, `action`, `is_open`, `remark`, `is_deleted`)
+VALUES (@parentid, 'worddict_edit', '修改', 'edit', '/word/worddict/edit', 'form', 2, 2, 2, 2, NULL, 0);
+INSERT INTO `menu`(`parent_id`, `code`, `name`, `alias`, `path`, `source`, `sort`, `category`, `action`, `is_open`, `remark`, `is_deleted`)
+VALUES (@parentid, 'worddict_delete', '删除', 'delete', '/api/word/worddict/remove', 'delete', 3, 2, 3, 3, NULL, 0);
+INSERT INTO `menu`(`parent_id`, `code`, `name`, `alias`, `path`, `source`, `sort`, `category`, `action`, `is_open`, `remark`, `is_deleted`)
+VALUES (@parentid, 'worddict_view', '查看', 'view', '/word/worddict/view', 'file-text', 4, 2, 2, 2, NULL, 0);

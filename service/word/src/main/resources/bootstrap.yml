@@ -1,0 +1,29 @@
+#服务器端口
+server:
+  port: 2002
+
+spring:
+  profiles:
+    active: test
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Chongqing
+    default-property-inclusion: NON_NULL
+    serialization-inclusion: NON_NULL
+  application:
+    name: word
+  cloud:
+    nacos:
+      config:
+        shared-dataids: zipkin.yaml,management.yaml,logging.yaml,sentinel.yaml,hystrix.yaml,jackson.yaml
+        ext-config:
+          - {data-id: word.yaml,group: DEFAULT_GROUP,refresh: true}
+
+
+swagger:
+  title: WORD
+  base-packages:
+    - org.easy.word.controller
+
+
+

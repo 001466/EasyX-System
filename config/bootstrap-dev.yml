@@ -4,13 +4,8 @@ spring:
   cloud:
     nacos:
       discovery:
-        namespace: 948125e2-a96f-4717-ba2f-b148287c54c9
+        namespace: cec0ab23-ff91-4d9c-a70d-c14d47c93100
         server-addr: 47.108.150.218:8848
-        watch:
-          enabled: false
-        naming-load-cache-at-start: true
-        watch-delay: 30000
       config:
-        namespace: 948125e2-a96f-4717-ba2f-b148287c54c9
+        namespace: cec0ab23-ff91-4d9c-a70d-c14d47c93100
         server-addr: 47.108.150.218:8848
-        timeout: 30000
