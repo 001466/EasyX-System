@@ -14,21 +14,39 @@
  *  this software without specific prior written permission.
  *  Author: Chill 庄骞 (smallchill@163.com)
  */
-package org.easy.order.dto;
+package org.easy.order.wrapper;
 
-import org.easy.order.entity.Order;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.AllArgsConstructor;
+
+import org.easy.mybatisplus.support.BaseEntityWrapper;
+import org.easy.tool.util.BeanUtil;
+//import org.easy.system.feign.IDictClient;
+
+import org.easy.order.entity.LandingOrder;
+import org.easy.order.vo.LandingOrderVO;
 
 /**
- * 数据传输对象实体类
+ * 包装类,返回视图层所需的字段
  *
  * @author EasyX è±è¯ (240018840@qq.com)
  * @since 2020-12-31
  */
-@Data
-@EqualsAndHashCode(callSuper = true)
-public class OrderDTO extends Order {
-	private static final long serialVersionUID = 1L;
+@AllArgsConstructor
+public class LandingOrderWrapper extends BaseEntityWrapper<LandingOrder, LandingOrderVO>  {
+
+	//private IDictClient dictClient;
+
+	@Override
+	public LandingOrderVO entityVO(LandingOrder landingOrder) {
+		LandingOrderVO landingOrderVO = BeanUtil.copy(landingOrder, LandingOrderVO.class);
+
+		/*R<String> dict = dictClient.getValue("landingOrder" , landingOrderVO.getCategory());
+		if (dict.isSuccess()) {
+			String categoryName = dict.getData();
+			landingOrderVO.setCategoryName(categoryName);
+		}*/
+
+		return landingOrderVO;
+	}
 
 }

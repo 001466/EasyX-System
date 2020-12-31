@@ -18,9 +18,9 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 -- Table structure for order
 -- ----------------------------
-DROP TABLE IF EXISTS `order`;
-CREATE TABLE `order` (
-  `id` bigint(20) NOT NULL,
+DROP TABLE IF EXISTS `landing_order`;
+CREATE TABLE `landing_order` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `type` varchar(64) DEFAULT NULL,
   `custom_name` varchar(64) DEFAULT NULL,
   `custom_mobile` varchar(64) DEFAULT NULL,
@@ -63,8 +63,8 @@ CREATE TABLE `order` (
 -- ----------------------------
 -- Table structure for visitor
 -- ----------------------------
-DROP TABLE IF EXISTS `visitor`;
-CREATE TABLE `visitor` (
+DROP TABLE IF EXISTS `landing_visitor`;
+CREATE TABLE `landing_visitor` (
   `custom_type` int(11) DEFAULT NULL COMMENT '0付费1免费',
   `custom_from` varchar(64) DEFAULT NULL,
   `custom_visit_url` varchar(128) DEFAULT NULL,

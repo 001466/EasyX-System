@@ -14,29 +14,28 @@
  *  this software without specific prior written permission.
  *  Author: Chill 庄骞 (smallchill@163.com)
  */
-package org.easy.order.mapper;
+package org.easy.order.service.impl;
 
-import org.easy.order.entity.Order;
-import org.easy.order.vo.OrderVO;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.easy.order.entity.LandingOrder;
+import org.easy.order.vo.LandingOrderVO;
+import org.easy.order.mapper.LandingOrderMapper;
+import org.easy.order.service.ILandingOrderService;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.stereotype.Service;
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import java.util.List;
 
 /**
- *  Mapper 接口
+ *  服务实现类
  *
  * @author EasyX è±è¯ (240018840@qq.com)
  * @since 2020-12-31
  */
-public interface OrderMapper extends BaseMapper<Order> {
+@Service
+public class LandingOrderServiceImpl extends ServiceImpl<LandingOrderMapper, LandingOrder> implements ILandingOrderService {
 
-	/**
-	 * 自定义分页
-	 *
-	 * @param page
-	 * @param order
-	 * @return
-	 */
-	List<OrderVO> selectOrderPage(IPage page, OrderVO order);
+	@Override
+	public IPage<LandingOrderVO> selectLandingOrderPage(IPage<LandingOrderVO> page, LandingOrderVO landingOrder) {
+		return page.setRecords(baseMapper.selectLandingOrderPage(page, landingOrder));
+	}
 
 }

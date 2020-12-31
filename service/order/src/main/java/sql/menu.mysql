@@ -1,11 +1,11 @@
 INSERT INTO `menu`(`parent_id`, `code`, `name`, `alias`, `path`, `source`, `sort`, `category`, `action`, `is_open`, `remark`, `is_deleted`)
-VALUES (0, 'order', '订单', 'menu', '/order/order', NULL, 1, 1, 0, 1, NULL, 0);
+VALUES (0, 'landingorder', '订单', 'menu', '/order/landingorder', NULL, 1, 1, 0, 1, NULL, 0);
 set @parentid = (SELECT LAST_INSERT_ID());
 INSERT INTO `menu`(`parent_id`, `code`, `name`, `alias`, `path`, `source`, `sort`, `category`, `action`, `is_open`, `remark`, `is_deleted`)
-VALUES (@parentid, 'order_add', '新增', 'add', '/order/order/add', 'plus', 1, 2, 1, 1, NULL, 0);
+VALUES (@parentid, 'landingorder_add', '新增', 'add', '/order/landingorder/add', 'plus', 1, 2, 1, 1, NULL, 0);
 INSERT INTO `menu`(`parent_id`, `code`, `name`, `alias`, `path`, `source`, `sort`, `category`, `action`, `is_open`, `remark`, `is_deleted`)
-VALUES (@parentid, 'order_edit', '修改', 'edit', '/order/order/edit', 'form', 2, 2, 2, 2, NULL, 0);
+VALUES (@parentid, 'landingorder_edit', '修改', 'edit', '/order/landingorder/edit', 'form', 2, 2, 2, 2, NULL, 0);
 INSERT INTO `menu`(`parent_id`, `code`, `name`, `alias`, `path`, `source`, `sort`, `category`, `action`, `is_open`, `remark`, `is_deleted`)
-VALUES (@parentid, 'order_delete', '删除', 'delete', '/api/order/order/remove', 'delete', 3, 2, 3, 3, NULL, 0);
+VALUES (@parentid, 'landingorder_delete', '删除', 'delete', '/api/order/landingorder/remove', 'delete', 3, 2, 3, 3, NULL, 0);
 INSERT INTO `menu`(`parent_id`, `code`, `name`, `alias`, `path`, `source`, `sort`, `category`, `action`, `is_open`, `remark`, `is_deleted`)
-VALUES (@parentid, 'order_view', '查看', 'view', '/order/order/view', 'file-text', 4, 2, 2, 2, NULL, 0);
+VALUES (@parentid, 'landingorder_view', '查看', 'view', '/order/landingorder/view', 'file-text', 4, 2, 2, 2, NULL, 0);

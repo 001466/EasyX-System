@@ -14,39 +14,23 @@
  *  this software without specific prior written permission.
  *  Author: Chill 庄骞 (smallchill@163.com)
  */
-package org.easy.order.wrapper;
+package org.easy.order.vo;
 
-import lombok.AllArgsConstructor;
-
-import org.easy.mybatisplus.support.BaseEntityWrapper;
-import org.easy.tool.util.BeanUtil;
-//import org.easy.system.feign.IDictClient;
-
-import org.easy.order.entity.Order;
-import org.easy.order.vo.OrderVO;
+import org.easy.order.entity.LandingOrder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import io.swagger.annotations.ApiModel;
 
 /**
- * 包装类,返回视图层所需的字段
+ * 视图实体类
  *
  * @author EasyX è±è¯ (240018840@qq.com)
  * @since 2020-12-31
  */
-@AllArgsConstructor
-public class OrderWrapper extends BaseEntityWrapper<Order, OrderVO>  {
-
-	//private IDictClient dictClient;
-
-	@Override
-	public OrderVO entityVO(Order order) {
-		OrderVO orderVO = BeanUtil.copy(order, OrderVO.class);
-
-		/*R<String> dict = dictClient.getValue("order" , orderVO.getCategory());
-		if (dict.isSuccess()) {
-			String categoryName = dict.getData();
-			orderVO.setCategoryName(categoryName);
-		}*/
-
-		return orderVO;
-	}
+@Data
+@EqualsAndHashCode(callSuper = true)
+@ApiModel(value = "LandingOrderVO对象", description = "LandingOrderVO对象")
+public class LandingOrderVO extends LandingOrder {
+	private static final long serialVersionUID = 1L;
 
 }

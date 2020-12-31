@@ -14,28 +14,29 @@
  *  this software without specific prior written permission.
  *  Author: Chill 庄骞 (smallchill@163.com)
  */
-package org.easy.order.service;
+package org.easy.order.mapper;
 
-import org.easy.order.entity.Order;
-import org.easy.order.vo.OrderVO;
-import com.baomidou.mybatisplus.extension.service.IService;
+import org.easy.order.entity.LandingOrder;
+import org.easy.order.vo.LandingOrderVO;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import java.util.List;
 
 /**
- *  服务类
+ *  Mapper 接口
  *
  * @author EasyX è±è¯ (240018840@qq.com)
  * @since 2020-12-31
  */
-public interface IOrderService extends IService<Order> {
+public interface LandingOrderMapper extends BaseMapper<LandingOrder> {
 
 	/**
 	 * 自定义分页
 	 *
 	 * @param page
-	 * @param order
+	 * @param landingOrder
 	 * @return
 	 */
-	IPage<OrderVO> selectOrderPage(IPage<OrderVO> page, OrderVO order);
+	List<LandingOrderVO> selectLandingOrderPage(IPage page, LandingOrderVO landingOrder);
 
 }

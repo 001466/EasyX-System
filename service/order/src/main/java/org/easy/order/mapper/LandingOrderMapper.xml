@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.easy.order.mapper.OrderMapper">
+<mapper namespace="org.easy.order.mapper.LandingOrderMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="orderResultMap" type="org.easy.order.entity.Order">
+    <resultMap id="landingOrderResultMap" type="org.easy.order.entity.LandingOrder">
         <id column="id" property="id"/>
         <result column="type" property="type"/>
         <result column="custom_name" property="customName"/>
@@ -44,8 +44,8 @@
     </resultMap>
 
 
-    <select id="selectOrderPage" resultMap="orderResultMap">
-        select * from order where is_deleted = 0
+    <select id="selectLandingOrderPage" resultMap="landingOrderResultMap">
+        select * from landing_order where is_deleted = 0
     </select>
 
 </mapper>

@@ -20,6 +20,9 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.io.Serializable;
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import io.swagger.annotations.ApiModel;
@@ -32,11 +35,12 @@ import io.swagger.annotations.ApiModelProperty;
  * @since 2020-12-31
  */
 @Data
-@ApiModel(value = "Order对象", description = "Order对象")
-public class Order implements Serializable {
+@ApiModel(value = "LandingOrder对象", description = "LandingOrder对象")
+public class LandingOrder implements Serializable {
 
-  private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
+  @TableId(value = "id",type =IdType.AUTO)
   private Long id;
   private String type;
   private String customName;
@@ -48,10 +52,8 @@ public class Order implements Serializable {
     /**
      * 0付费1免费
      */
-
-
-  @ApiModelProperty(value = "0付费1免费")
-  private Integer customType;
+    @ApiModelProperty(value = "0付费1免费")
+    private Integer customType;
   private String customFrom;
   private String customVisitUrl;
   private String productId;
@@ -67,10 +69,8 @@ public class Order implements Serializable {
     /**
      * 0未发货1已发货-1已退货
      */
-
-
-  @ApiModelProperty(value = "0未发货1已发货-1已退货")
-  private Integer deliverStatus;
+    @ApiModelProperty(value = "0未发货1已发货-1已退货")
+    private Integer deliverStatus;
   private String deliverExpress;
   private String deliverExpressId;
   private Long createUser;
@@ -83,10 +83,8 @@ public class Order implements Serializable {
     /**
      * 0未转化1已转化
      */
-
-
-  @ApiModelProperty(value = "0未转化1已转化")
-  private Integer status;
+    @ApiModelProperty(value = "0未转化1已转化")
+    private Integer status;
   private String browserType;
   private String browserName;
   private String browserOs;

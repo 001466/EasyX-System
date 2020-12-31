@@ -14,23 +14,21 @@
  *  this software without specific prior written permission.
  *  Author: Chill 庄骞 (smallchill@163.com)
  */
-package org.easy.order.vo;
+package org.easy.order.dto;
 
-import org.easy.order.entity.Order;
+import org.easy.order.entity.LandingOrder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import io.swagger.annotations.ApiModel;
 
 /**
- * 视图实体类
+ * 数据传输对象实体类
  *
  * @author EasyX è±è¯ (240018840@qq.com)
  * @since 2020-12-31
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
-@ApiModel(value = "OrderVO对象", description = "OrderVO对象")
-public class OrderVO extends Order {
+public class LandingOrderDTO extends LandingOrder {
 	private static final long serialVersionUID = 1L;
 
 }

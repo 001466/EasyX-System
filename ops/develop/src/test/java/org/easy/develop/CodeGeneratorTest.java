@@ -62,7 +62,7 @@ public class CodeGeneratorTest {
 	/**
 	 * 需要生成的表名(两者只能取其一)
 	 */
-	public static String[] TABLES_INCLUDE = {"order"};
+	public static String[] TABLES_INCLUDE = {"landing_order"};
 	/**
 	 * 需要排除的表名(两者只能取其一)
 	 */
