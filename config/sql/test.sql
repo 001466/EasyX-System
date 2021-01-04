@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50729
 File Encoding         : 65001
 
-Date: 2021-01-04 18:05:42
+Date: 2021-01-04 18:22:05
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -60,7 +60,7 @@ CREATE TABLE `dict` (
   `remark` varchar(255) DEFAULT NULL COMMENT '字典备注',
   `is_deleted` int(2) DEFAULT '0' COMMENT '是否已删除',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=98 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=113 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of dict
@@ -109,6 +109,21 @@ INSERT INTO `dict` VALUES ('94', '0', 'sentence', '低温', '低温', null, null
 INSERT INTO `dict` VALUES ('95', '0', 'sentence', '爱情', '爱情', null, null, '0');
 INSERT INTO `dict` VALUES ('96', '0', 'sentence', '礼物', '礼物', null, null, '0');
 INSERT INTO `dict` VALUES ('97', '0', 'sentence', '男人', '男人', null, null, '0');
+INSERT INTO `dict` VALUES ('98', '0', 'emoji', '单位', '单位', null, null, '0');
+INSERT INTO `dict` VALUES ('99', '0', 'emoji', '动物', '动物', null, null, '0');
+INSERT INTO `dict` VALUES ('100', '0', 'emoji', '几何', '几何', null, null, '0');
+INSERT INTO `dict` VALUES ('101', '0', 'emoji', '箭头', '箭头', null, null, '0');
+INSERT INTO `dict` VALUES ('102', '0', 'emoji', '棋牌', '棋牌', null, null, '0');
+INSERT INTO `dict` VALUES ('103', '0', 'emoji', '圈圈', '圈圈', null, null, '0');
+INSERT INTO `dict` VALUES ('104', '0', 'emoji', '热门', '热门', null, null, '0');
+INSERT INTO `dict` VALUES ('105', '0', 'emoji', '日期', '日期', null, null, '0');
+INSERT INTO `dict` VALUES ('106', '0', 'emoji', '圣诞', '圣诞', null, null, '0');
+INSERT INTO `dict` VALUES ('107', '0', 'emoji', '手帐', '手帐', null, null, '0');
+INSERT INTO `dict` VALUES ('108', '0', 'emoji', '天气', '天气', null, null, '0');
+INSERT INTO `dict` VALUES ('109', '0', 'emoji', '文字', '文字', null, null, '0');
+INSERT INTO `dict` VALUES ('110', '0', 'emoji', '心情', '心情', null, null, '0');
+INSERT INTO `dict` VALUES ('111', '0', 'emoji', '星星', '星星', null, null, '0');
+INSERT INTO `dict` VALUES ('112', '0', 'emoji', '音乐', '音乐', null, null, '0');
 
 -- ----------------------------
 -- Table structure for menu

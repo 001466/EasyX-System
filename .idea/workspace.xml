@@ -1,30 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d7ef9ad6-a2b8-403f-b3f2-c7308c99cc74" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/service/order/src/main/java/org/easy/order/controller/admin/LandingOrderAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/sql/test.sql" beforeDir="false" afterPath="$PROJECT_DIR$/config/sql/test.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/sql/test_word.sql" beforeDir="false" afterPath="$PROJECT_DIR$/config/sql/test_word.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/handler/MobileLoginFailureHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/handler/MobileLoginFailureHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/handler/MobileLoginSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/handler/MobileLoginSuccessHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/auth/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/order/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/order/src/main/java/org/easy/order/controller/LandingOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/order/src/main/java/org/easy/order/controller/LandingOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/system/src/main/java/org/easy/system/controller/DictController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/system/src/main/java/org/easy/system/controller/DictController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/system/src/main/java/org/easy/system/mapper/DictMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/system/src/main/java/org/easy/system/mapper/DictMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/system/src/main/java/org/easy/system/mapper/DictMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/system/src/main/java/org/easy/system/mapper/DictMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/controller/WordDictController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/dto/WordDictDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/entity/WordDict.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/mapper/WordDictMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/mapper/WordDictMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/service/IWordDictService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/WordApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/service/impl/WordDictServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/vo/WordDictVO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/wrapper/WordDictWrapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/word/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service/word/src/main/resources/bootstrap.yml" afterDir="false" />
-    </list>
+    <list default="true" id="d7ef9ad6-a2b8-403f-b3f2-c7308c99cc74" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/ops/target/" />
@@ -58,7 +35,7 @@
       <file leaf-file-name="Query.class" pinned="false" current-in-tab="true">
         <entry file="jar://E:/maven/localWarehouse/org/easy/easy-mybatisplus/1.0-SNAPSHOT/easy-mybatisplus-1.0-SNAPSHOT.jar!/org/easy/mybatisplus/support/Query.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
+            <state relative-caret-position="17">
               <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
             </state>
           </provider>
@@ -515,7 +492,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.63852817" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.63852817" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32900432" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32900432" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
@@ -523,7 +500,7 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32900432" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.4642857" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3874459" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.88419914" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23187633" />
       <window_info anchor="bottom" id="Problems" order="12" weight="0.32900432" />
       <window_info id="JRebel" order="2" side_tool="true" />
@@ -917,7 +894,7 @@
     </entry>
     <entry file="jar://E:/maven/localWarehouse/org/easy/easy-mybatisplus/1.0-SNAPSHOT/easy-mybatisplus-1.0-SNAPSHOT.jar!/org/easy/mybatisplus/support/Query.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
+        <state relative-caret-position="17">
           <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
         </state>
       </provider>
