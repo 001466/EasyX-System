@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50729
 File Encoding         : 65001
 
-Date: 2020-12-31 14:55:25
+Date: 2021-01-04 18:05:42
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -44,7 +44,7 @@ CREATE TABLE `client` (
 -- ----------------------------
 -- Records of client
 -- ----------------------------
-INSERT INTO `client` VALUES ('21', 'gateway_fa', '{noop}gateway_fa', '', 'approve', 'refresh_token,password,authorization_code', 'http://192.168.9.54:9999/login/oauth2/code/okta', '', '1296000000', '1296000000', '', '', '1', '2019-11-11 10:11:46', '1', '2020-09-03 17:45:01', '1', '0');
+INSERT INTO `client` VALUES ('22', 'extjs', '{noop}extjs', '', 'all', 'refresh_token,password,authorization_code', 'http://localhost:1000/login/oauth2/code/okta', '', '1296000000', '1296000000', '', '', '1', '2019-11-11 10:11:46', '1', '2020-09-03 17:45:01', '1', '0');
 
 -- ----------------------------
 -- Table structure for dict
@@ -60,7 +60,7 @@ CREATE TABLE `dict` (
   `remark` varchar(255) DEFAULT NULL COMMENT '字典备注',
   `is_deleted` int(2) DEFAULT '0' COMMENT '是否已删除',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=72 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=98 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of dict
@@ -71,7 +71,6 @@ INSERT INTO `dict` VALUES ('3', '1', 'sex', '2', '女', '2', '女', '0');
 INSERT INTO `dict` VALUES ('4', '0', 'notice', '0', '通知类型', '2', '通知类型', '0');
 INSERT INTO `dict` VALUES ('5', '4', 'notice', '1', '发布通知', '1', '发布通知', '0');
 INSERT INTO `dict` VALUES ('6', '4', 'notice', '2', '批转通知', '2', '批转通知', '0');
-INSERT INTO `dict` VALUES ('7', '4', 'notice', '3', '转发通知', '3', '转发通知', '0');
 INSERT INTO `dict` VALUES ('8', '4', 'notice', '4', '指示通知', '4', '指示通知', '0');
 INSERT INTO `dict` VALUES ('9', '4', 'notice', '5', '任免通知', '5', '任免通知', '0');
 INSERT INTO `dict` VALUES ('10', '4', 'notice', '6', '事务通知', '6', '事务通知', '0');
@@ -85,6 +84,31 @@ INSERT INTO `dict` VALUES ('17', '14', 'button_func', '3', '工具操作栏', '3
 INSERT INTO `dict` VALUES ('18', '0', 'yes_no', '0', '是否', '5', '是否', '0');
 INSERT INTO `dict` VALUES ('19', '18', 'yes_no', '1', '否', '1', '否', '0');
 INSERT INTO `dict` VALUES ('20', '18', 'yes_no', '2', '是', '2', '是', '0');
+INSERT INTO `dict` VALUES ('73', '0', 'sentence', '2020', '2020', null, null, '0');
+INSERT INTO `dict` VALUES ('74', '0', 'sentence', '2021', '2021', null, null, '0');
+INSERT INTO `dict` VALUES ('75', '0', 'sentence', '蝴蝶结', '蝴蝶结', null, null, '0');
+INSERT INTO `dict` VALUES ('76', '0', 'sentence', '进度', '进度', null, null, '0');
+INSERT INTO `dict` VALUES ('77', '0', 'sentence', '礼物', '礼物', null, null, '0');
+INSERT INTO `dict` VALUES ('78', '0', 'sentence', '男人', '男人', null, null, '0');
+INSERT INTO `dict` VALUES ('79', '0', 'sentence', '女人', '女人', null, null, '0');
+INSERT INTO `dict` VALUES ('80', '0', 'sentence', '朋友圈', '朋友圈', null, null, '0');
+INSERT INTO `dict` VALUES ('81', '0', 'sentence', '圣诞', '圣诞', null, null, '0');
+INSERT INTO `dict` VALUES ('82', '0', 'sentence', '时间', '时间', null, null, '0');
+INSERT INTO `dict` VALUES ('83', '0', 'sentence', '时尚', '时尚', null, null, '0');
+INSERT INTO `dict` VALUES ('84', '0', 'sentence', '台词', '台词', null, null, '0');
+INSERT INTO `dict` VALUES ('85', '0', 'sentence', '应用', '应用', null, null, '0');
+INSERT INTO `dict` VALUES ('86', '0', 'sentence', '游戏', '游戏', null, null, '0');
+INSERT INTO `dict` VALUES ('87', '0', 'sentence', 'AUGUST', 'AUGUST', null, null, '0');
+INSERT INTO `dict` VALUES ('88', '0', 'sentence', 'emoji', 'emoji', null, null, '0');
+INSERT INTO `dict` VALUES ('89', '0', 'sentence', 'July', 'July', null, null, '0');
+INSERT INTO `dict` VALUES ('90', '0', 'sentence', 'NOMO', 'NOMO', null, null, '0');
+INSERT INTO `dict` VALUES ('91', '0', 'sentence', 'summer', 'summer', null, null, '0');
+INSERT INTO `dict` VALUES ('92', '0', 'sentence', '1月', '1月', null, null, '0');
+INSERT INTO `dict` VALUES ('93', '0', 'sentence', '元诞', '元诞', null, null, '0');
+INSERT INTO `dict` VALUES ('94', '0', 'sentence', '低温', '低温', null, null, '0');
+INSERT INTO `dict` VALUES ('95', '0', 'sentence', '爱情', '爱情', null, null, '0');
+INSERT INTO `dict` VALUES ('96', '0', 'sentence', '礼物', '礼物', null, null, '0');
+INSERT INTO `dict` VALUES ('97', '0', 'sentence', '男人', '男人', null, null, '0');
 
 -- ----------------------------
 -- Table structure for menu

@@ -16,6 +16,7 @@
  */
 package org.easy.system.mapper;
 
+import org.apache.ibatis.annotations.Param;
 import org.easy.system.entity.Dict;
 import org.easy.system.vo.DictVO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
@@ -37,6 +38,6 @@ public interface DictMapper extends BaseMapper<Dict> {
 	 * @param dict
 	 * @return
 	 */
-	List<DictVO> selectDictPage(IPage page, DictVO dict);
+	List<DictVO> selectDictPage(IPage page,@Param("dict") DictVO dict);
 
 }

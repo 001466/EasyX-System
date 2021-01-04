@@ -24,6 +24,9 @@ swagger:
   - org.easy.auth.endpoint
 
 
+    @Value("#{'${notify.phones}'.split(',')}")
+    private List<String> phones;
+
 
 logging:
   path: logs

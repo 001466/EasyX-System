@@ -17,9 +17,12 @@
 package org.easy.system.controller;
 
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.AllArgsConstructor;
+
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.easy.cloud.annotation.PathVersion;
@@ -83,6 +86,7 @@ public class DictController {
 	@GetMapping("/page")
 	@ApiOperation(value = "分页1", notes = "传入dict", position = 3)
 	public R<IPage<DictVO>> page(DictVO dict, Query query) {
+		query.setDescs("code");
 		IPage<DictVO> pages = dictService.selectDictPage(Condition.getPage(query), dict);
 		return R.success(pages).setMessage("v1");
 	}
@@ -118,9 +122,9 @@ public class DictController {
 	/**
 	* 新增或修改 
 	*/
-	@PostMapping("/submit")
+	@PostMapping(path = "/submit",consumes = {"application/x-www-form-urlencoded"},produces = {"application/json;charset=UTF-8"})
 	@ApiOperation(value = "新增或修改", notes = "传入dict", position = 6)
-	public R submit(@Valid @RequestBody Dict dict) {
+	public R submit(@Valid @ModelAttribute Dict dict) {
 		return R.status(dictService.saveOrUpdate(dict));
 	}
 
@@ -129,9 +133,17 @@ public class DictController {
 	* 删除 
 	*/
 	@PostMapping("/remove")
-	@ApiOperation(value = "删除", notes = "传入ids", position = 7)
+	@ApiOperation(value = "删除1", notes = "传入ids", position = 7)
 	public R remove(@ApiParam(value = "主键集合", required = true) @RequestParam String ids) {
 		return R.status(dictService.removeByIds(Func.toIntList(ids)));
+	}
+
+	@RequestMapping (value="/remove/{id}",method = RequestMethod.POST)
+	@ApiOperation(value = "册除2", notes = "册除")
+	@ApiImplicitParam(name="id",value="id",required=true,paramType="path")
+	public R<Integer> remove(@PathVariable("id") Long id, HttpServletRequest request) {
+		dictService.removeById(id);
+		return R.success();
 	}
 
 	

@@ -9,6 +9,7 @@ import org.easy.tool.util.SpringUtil;
 import org.easy.tool.util.WebUtil;
 import org.easy.tool.web.R;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;
@@ -22,6 +23,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 
 @Slf4j
 @Component
@@ -34,19 +36,19 @@ public class MobileLoginSuccessHandler extends SavedRequestAwareAuthenticationSu
     @Autowired
     private ClientDetailsService clientDetailsService;
 
+    @Value("#{'${auth.mine-client-ids}'.split(',')}")
+    private List<String> clientIds;
+
     @Override
     //@Log(LogType.LOG_TYPE_NORMAL_LOGIN_SUCCESS)
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws ServletException, IOException {
-
-        System.err.println("authentication："+authentication);
-        System.err.println("isMobile："+WebUtil.isMobile(request));
 
         String[] tokens = TokenUtil.extractAndDecodeHeader();
         assert tokens.length == 2;
         String client_id = tokens[0];
         String client_secret = tokens[1];
 
-        if(WebUtil.isMobile(request)||(client_id!=null && (client_id.toLowerCase().equals("ios")||client_id.toLowerCase().equals("android")))){
+        if(clientIds.contains(client_id)){
 
             UserDetails principal = (UserDetails) authentication.getPrincipal();
 
@@ -68,11 +70,11 @@ public class MobileLoginSuccessHandler extends SavedRequestAwareAuthenticationSu
 
             response.setContentType(MediaType.APPLICATION_JSON_UTF8_VALUE);
 
-            if(WebUtil.isMobile(request)) {
+//            if(WebUtil.isMobile(request)) {
                 response.getWriter().write(JsonUtil.toJson(R.success().setData(token)));
-            }else{
-                response.getWriter().write(JsonUtil.toJson(token));
-            }
+//            }else{
+//                response.getWriter().write(JsonUtil.toJson(token));
+//            }
 
 //            StringBuilder url=new StringBuilder("/oauth/token/create").append("?client_id=").append(client_id).append("&client_secret=").append(client_secret);
 //            getRedirectStrategy().sendRedirect(request, response, url.toString());

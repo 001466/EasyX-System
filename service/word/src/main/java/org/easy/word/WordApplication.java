@@ -14,28 +14,24 @@
  *  this software without specific prior written permission.
  *  Author: Chill 庄骞 (smallchill@163.com)
  */
-package org.easy.word.service.impl;
+package org.easy.word;
 
-import org.easy.word.entity.WordDict;
-import org.easy.word.vo.WordDictVO;
-import org.easy.word.mapper.WordDictMapper;
-import org.easy.word.service.IWordDictService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import org.springframework.stereotype.Service;
-import com.baomidou.mybatisplus.core.metadata.IPage;
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
- *  服务实现类
+ * 用户启动器
  *
- * @author EasyX è±è¯ (240018840@qq.com)
- * @since 2020-12-31
  */
-@Service
-public class WordDictServiceImpl extends ServiceImpl<WordDictMapper, WordDict> implements IWordDictService {
-
-	@Override
-	public IPage<WordDictVO> selectWordDictPage(IPage<WordDictVO> page, WordDictVO wordDict) {
-		return page.setRecords(baseMapper.selectWordDictPage(page, wordDict));
+@SpringBootApplication
+@EnableCaching
+@EnableTransactionManagement
+@MapperScan("org.easy.word.mapper")
+public class WordApplication {
+	public static void main(String[] args) {
+		SpringApplication.run(WordApplication.class, args);
 	}
-
 }

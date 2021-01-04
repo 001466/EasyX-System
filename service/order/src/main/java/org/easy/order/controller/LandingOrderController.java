@@ -52,37 +52,37 @@ public class LandingOrderController {
 
 	//private IDictClient dictClient;
 
-	/**
-	* 详情
-	*/
-	@GetMapping("/detail")
-	@ApiOperation(value = "详情", notes = "传入landingOrder", position = 1)
-	public R<LandingOrderVO> detail(LandingOrder landingOrder) {
-		LandingOrder detail = landingOrderService.getOne(Condition.getQueryWrapper(landingOrder));
-		LandingOrderWrapper landingOrderWrapper = new LandingOrderWrapper();
-		return R.success(landingOrderWrapper.entityVO(detail));
-	}
+//	/**
+//	* 详情
+//	*/
+//	@GetMapping("/detail")
+//	@ApiOperation(value = "详情", notes = "传入landingOrder", position = 1)
+//	public R<LandingOrderVO> detail(LandingOrder landingOrder) {
+//		LandingOrder detail = landingOrderService.getOne(Condition.getQueryWrapper(landingOrder));
+//		LandingOrderWrapper landingOrderWrapper = new LandingOrderWrapper();
+//		return R.success(landingOrderWrapper.entityVO(detail));
+//	}
 
-	/**
-	* 列表 
-	*/
-	@GetMapping("/list")
-	@ApiOperation(value = "列表", notes = "传入landingOrder", position = 2)
-	public R<List<LandingOrderVO>> list(LandingOrder landingOrder) {
-		List<LandingOrder> list = landingOrderService.list(Condition.getQueryWrapper(landingOrder));
-		LandingOrderWrapper landingOrderWrapper = new LandingOrderWrapper();
-		return R.success(landingOrderWrapper.listVO(list));
-	}
+//	/**
+//	* 列表
+//	*/
+//	@GetMapping("/list")
+//	@ApiOperation(value = "列表", notes = "传入landingOrder", position = 2)
+//	public R<List<LandingOrderVO>> list(LandingOrder landingOrder) {
+//		List<LandingOrder> list = landingOrderService.list(Condition.getQueryWrapper(landingOrder));
+//		LandingOrderWrapper landingOrderWrapper = new LandingOrderWrapper();
+//		return R.success(landingOrderWrapper.listVO(list));
+//	}
 
-	/**
-	* 自定义分页 
-	*/
-	@GetMapping("/page")
-	@ApiOperation(value = "分页", notes = "传入landingOrder", position = 3)
-	public R<IPage<LandingOrderVO>> page(LandingOrderVO landingOrder, Query query) {
-		IPage<LandingOrderVO> pages = landingOrderService.selectLandingOrderPage(Condition.getPage(query), landingOrder);
-		return R.success(pages);
-	}
+//	/**
+//	* 自定义分页
+//	*/
+//	@GetMapping("/page")
+//	@ApiOperation(value = "分页", notes = "传入landingOrder", position = 3)
+//	public R<IPage<LandingOrderVO>> page(LandingOrderVO landingOrder, Query query) {
+//		IPage<LandingOrderVO> pages = landingOrderService.selectLandingOrderPage(Condition.getPage(query), landingOrder);
+//		return R.success(pages);
+//	}
 
 	/**
 	* 新增 
@@ -111,15 +111,15 @@ public class LandingOrderController {
 		return R.status(landingOrderService.saveOrUpdate(landingOrder));
 	}
 
-	
-	/**
-	* 删除 
-	*/
-	@PostMapping("/remove")
-	@ApiOperation(value = "删除", notes = "传入ids", position = 7)
-	public R remove(@ApiParam(value = "主键集合", required = true) @RequestParam String ids) {
-		return R.status(landingOrderService.removeByIds(Func.toIntList(ids)));
-	}
+//
+//	/**
+//	* 删除
+//	*/
+//	@PostMapping("/remove")
+//	@ApiOperation(value = "删除", notes = "传入ids", position = 7)
+//	public R remove(@ApiParam(value = "主键集合", required = true) @RequestParam String ids) {
+//		return R.status(landingOrderService.removeByIds(Func.toIntList(ids)));
+//	}
 
 	
 }

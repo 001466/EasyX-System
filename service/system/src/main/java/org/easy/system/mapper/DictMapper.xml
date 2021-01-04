@@ -17,6 +17,9 @@
 
     <select id="selectDictPage" resultMap="dictResultMap">
         select * from dict where is_deleted = 0
+        <if test="dict.code !=null ">
+            and code like '%${dict.code}%'
+        </if>
     </select>
 
 </mapper>

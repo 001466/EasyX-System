@@ -63,6 +63,8 @@ public class MobileLoginFailureHandler extends SimpleUrlAuthenticationFailureHan
     private Integer retryMax;
     @Value("${auth.security.oauth2.login-bound-minutes:15}")
     private Integer boundMinutes;
+    @Value("#{'${auth.mine-client-ids}'.split(',')}")
+    private List<String> clientIds;
 
 
 
@@ -158,12 +160,18 @@ public class MobileLoginFailureHandler extends SimpleUrlAuthenticationFailureHan
     }
 
     private void printResult(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
-        if(WebUtil.isMobile(request)){
+        String[] tokens = TokenUtil.extractAndDecodeHeader();
+        assert tokens.length == 2;
+        String client_id = tokens[0];
+        String client_secret = tokens[1];
+
+        if(clientIds.contains(client_id)){
             response.setContentType(MediaType.APPLICATION_JSON_UTF8_VALUE);
             response.getWriter().write(JsonUtil.toJson(R.fail(exception.getMessage())));
         }else {
             super.onAuthenticationFailure(request,response,exception);
         }
+
     }
 
 
