@@ -17,9 +17,12 @@
 package org.easy.word.controller;
 
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.AllArgsConstructor;
+
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.easy.mybatisplus.support.Condition;
@@ -105,9 +108,9 @@ public class WordController {
 	/**
 	* 新增或修改 
 	*/
-	@PostMapping("/submit")
+	@PostMapping(path = "/submit",consumes = {"application/x-www-form-urlencoded"},produces = {"application/json;charset=UTF-8"})
 	@ApiOperation(value = "新增或修改", notes = "传入word", position = 6)
-	public R submit(@Valid @RequestBody Word word) {
+	public R submit(@Valid @ModelAttribute Word word) {
 		return R.status(wordService.saveOrUpdate(word));
 	}
 
@@ -121,5 +124,12 @@ public class WordController {
 		return R.status(wordService.removeByIds(Func.toIntList(ids)));
 	}
 
+	@RequestMapping (value="/remove/{id}",method = RequestMethod.POST)
+	@ApiOperation(value = "册除2", notes = "册除")
+	@ApiImplicitParam(name="id",value="id",required=true,paramType="path")
+	public R<Integer> remove(@PathVariable("id") Long id, HttpServletRequest request) {
+		wordService.removeById(id);
+		return R.success();
+	}
 	
 }

@@ -26,30 +26,27 @@ public class CodeGeneratorTest {
 	/**
 	 * 代码生成的模块名
 	 */
-	public static String JAVA_CODE_NAME = "订单";
+	public static String JAVA_CODE_NAME = "文字标签";
 	/**
 	 * 代码所在服务名
 	 */
-	public static String JAVA_SERVICE_NAME = "order";
+	public static String JAVA_SERVICE_NAME = "word";
 	/**
 	 * 代码生成的包名
 	 */
-	public static String JAVA_PACKAGE_NAME = "org.easy.order";
+	public static String JAVA_PACKAGE_NAME = "org.easy.word";
 	/**
 	 * 代码生成的路径
 	 */
-	public static String JAVA_PACKAGE_PATH = "F:\\workspace\\EasyX-System\\service\\order";
+	public static String JAVA_PACKAGE_PATH = "F:\\workspace\\EasyX-System\\service\\word";
 
 
 
 
-	/**
-	 * 前端代码生成所属系统
-	 */
+
+	//前端代码生成所属系统
 	public static String WEB_NAME = "saber";
-	/**
-	 * 前端代码生成地址
-	 */
+	//前端代码生成地址
 	public static String WEB_PATH = "/Users/chill/Workspaces/product/Saber";
 
 
@@ -62,7 +59,7 @@ public class CodeGeneratorTest {
 	/**
 	 * 需要生成的表名(两者只能取其一)
 	 */
-	public static String[] TABLES_INCLUDE = {"landing_order"};
+	public static String[] TABLES_INCLUDE = {"word_tag"};
 	/**
 	 * 需要排除的表名(两者只能取其一)
 	 */
@@ -75,7 +72,7 @@ public class CodeGeneratorTest {
 	 * 基础业务字段
 	 */
 	//public static String[] SUPER_ENTITY_COLUMNS = {"id", "create_time", "create_user", "update_time", "update_user", "status", "is_deleted","enabled"};
-	public static String[] SUPER_ENTITY_COLUMNS = {"create_time", "create_user","update_time", "update_user", "status"};
+	public static String[] SUPER_ENTITY_COLUMNS = {"create_time", "create_user"};
 
 	/**
 	 * RUN THIS
