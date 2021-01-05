@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50729
 File Encoding         : 65001
 
-Date: 2021-01-05 16:57:52
+Date: 2021-01-05 17:29:14
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -108,6 +108,8 @@ CREATE TABLE `word_tag` (
 -- Records of word_tag
 -- ----------------------------
 INSERT INTO `word_tag` VALUES ('17', '几何', null, null);
+INSERT INTO `word_tag` VALUES ('30', '几何', null, null);
+INSERT INTO `word_tag` VALUES ('31', '礼物', null, null);
 
 -- ----------------------------
 -- Table structure for word_typ
@@ -125,3 +127,5 @@ CREATE TABLE `word_typ` (
 -- Records of word_typ
 -- ----------------------------
 INSERT INTO `word_typ` VALUES ('17', 'emoji', null, null);
+INSERT INTO `word_typ` VALUES ('30', 'emoji', null, null);
+INSERT INTO `word_typ` VALUES ('31', 'sentence', null, null);

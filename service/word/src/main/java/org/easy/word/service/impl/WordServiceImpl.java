@@ -93,9 +93,15 @@ public class WordServiceImpl extends ServiceImpl<WordMapper, Word> implements IW
 		wordTag.setWordId(wordId);
 		wordTagService.remove(Condition.getQueryWrapper(wordTag));
 
-		String tag=entity.getTag();
-		wordTag.setTag(tag);
-		wordTagService.save(wordTag);
+		String tagStr=entity.getTag();
+		if(!StringUtils.isEmpty(tagStr)){
+			String[] tagArr=tagStr.split(",");
+			for(String tag:tagArr){
+				wordTag.setTag(tag);
+				wordTagService.save(wordTag);
+			}
+		}
+
 	}
 
 	public void updateTyp(WordDTO entity){
@@ -104,9 +110,14 @@ public class WordServiceImpl extends ServiceImpl<WordMapper, Word> implements IW
 		wordTyp.setWordId(wordId);
 		wordTypService.remove(Condition.getQueryWrapper(wordTyp));
 
-		String typ=entity.getTyp();
-		wordTyp.setTyp(typ);
-		wordTypService.save(wordTyp);
+		String typStr=entity.getTyp();
+		if(!StringUtils.isEmpty(typStr)){
+			String[] typArr=typStr.split(",");
+			for(String typ:typArr){
+				wordTyp.setTyp(typ);
+				wordTypService.save(wordTyp);
+			}
+		}
 	}
 
 	@Override

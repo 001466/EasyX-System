@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7ef9ad6-a2b8-403f-b3f2-c7308c99cc74" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/config/sql/chart_set.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/word/src/main/resources/bootstrap-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/word/src/test/java/org/easy/word/TextConfig.java.bak" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/sql/test_word.sql" beforeDir="false" afterPath="$PROJECT_DIR$/config/sql/test_word.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/develop/src/test/java/org/easy/develop/CodeGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/src/test/java/org/easy/develop/CodeGeneratorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/develop/src/test/resources/templates/props/generator.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/src/test/resources/templates/props/generator.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/word/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/word/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/controller/WordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/controller/WordController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/dto/WordDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/dto/WordDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/mapper/WordMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/mapper/WordMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/mapper/WordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/mapper/WordMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/service/IWordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/service/IWordService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/service/impl/WordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/service/impl/WordServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/vo/WordVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/vo/WordVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/word/src/main/java/sql/menu.mysql" beforeDir="false" afterPath="$PROJECT_DIR$/service/word/src/main/java/sql/menu.mysql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/word/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service/word/src/main/resources/bootstrap.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,7 +34,26 @@
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="WordServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/word/src/main/java/org/easy/word/service/impl/WordServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="108" column="34" selection-start-line="108" selection-start-column="34" selection-end-line="108" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TextConfig.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/service/word/src/test/java/org/easy/word/TextConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-221">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -148,7 +152,6 @@
         <option value="$PROJECT_DIR$/ops/develop/src/test/java/org/easy/develop/CodeGeneratorTest.java" />
         <option value="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/dto/WordDTO.java" />
         <option value="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/vo/WordVO.java" />
-        <option value="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/service/impl/WordServiceImpl.java" />
         <option value="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/mapper/WordMapper.java" />
         <option value="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/mapper/WordMapper.xml" />
         <option value="$PROJECT_DIR$/service/word/src/main/resources/bootstrap.yml" />
@@ -156,6 +159,7 @@
         <option value="$PROJECT_DIR$/service/word/src/test/java/org/easy/word/TextConfig.java" />
         <option value="$PROJECT_DIR$/config/sql/test_word.sql" />
         <option value="$PROJECT_DIR$/config/sql/chart_set.sql" />
+        <option value="$PROJECT_DIR$/service/word/src/main/java/org/easy/word/service/impl/WordServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -202,12 +206,6 @@
             <path>
               <item name="EasyX-System" type="b2602c69:ProjectViewProjectNode" />
               <item name="EasyX-System" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EasyX-System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EasyX-System" type="462c0819:PsiDirectoryNode" />
               <item name="ops" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -219,12 +217,6 @@
               <item name="EasyX-System" type="b2602c69:ProjectViewProjectNode" />
               <item name="EasyX-System" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="order" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EasyX-System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EasyX-System" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="word" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -240,7 +232,7 @@
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="word" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EasyX-System" type="b2602c69:ProjectViewProjectNode" />
@@ -248,7 +240,7 @@
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="word" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -257,20 +249,9 @@
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="word" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="word" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EasyX-System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EasyX-System" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="word" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="word" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -498,6 +479,9 @@
     <history-entry file="TextConfig - 2021.01.05 at 16h 55m 32s.xml">
       <configuration name="TextConfig" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TextConfig - 2021.01.05 at 18h 03m 26s.xml">
+      <configuration name="TextConfig" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -510,6 +494,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
@@ -521,15 +506,15 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.504329" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.504329" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32900432" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32900432" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32900432" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.267316" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3961039" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.7467533" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.5530303" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23187633" />
       <window_info anchor="bottom" id="Problems" order="12" weight="0.32900432" />
       <window_info id="JRebel" order="2" side_tool="true" />
@@ -828,13 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/word/src/main/java/org/easy/word/service/impl/WordServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="64" column="14" lean-forward="true" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service/word/src/main/java/org/easy/word/wrapper/WordWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="423">
@@ -950,17 +928,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/word/src/test/java/org/easy/word/TextConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="44" column="71" selection-start-line="44" selection-start-column="71" selection-end-line="44" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/sql/chart_set.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="1" column="52" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/word/src/main/java/org/easy/word/service/impl/WordServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="108" column="34" selection-start-line="108" selection-start-column="34" selection-end-line="108" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/word/src/test/java/org/easy/word/TextConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
