@@ -31,6 +31,7 @@ import org.easy.tool.web.R;
 import org.easy.tool.util.Func;
 //import org.springblade.system.feign.IDictClient;
 
+import org.easy.word.dto.WordDTO;
 import org.springframework.web.bind.annotation.*;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.easy.word.entity.Word;
@@ -60,7 +61,7 @@ public class WordController {
 	*/
 	@GetMapping("/detail")
 	@ApiOperation(value = "详情", notes = "传入word", position = 1)
-	public R<WordVO> detail(Word word) {
+	public R<WordVO> detail(WordDTO word) {
 		Word detail = wordService.getOne(Condition.getQueryWrapper(word));
 		WordWrapper wordWrapper = new WordWrapper();
 		return R.success(wordWrapper.entityVO(detail));
@@ -71,7 +72,7 @@ public class WordController {
 	*/
 	@GetMapping("/list")
 	@ApiOperation(value = "列表", notes = "传入word", position = 2)
-	public R<List<WordVO>> list(Word word) {
+	public R<List<WordVO>> list(WordDTO word) {
 		List<Word> list = wordService.list(Condition.getQueryWrapper(word));
 		WordWrapper wordWrapper = new WordWrapper();
 		return R.success(wordWrapper.listVO(list));
@@ -82,7 +83,7 @@ public class WordController {
 	*/
 	@GetMapping("/page")
 	@ApiOperation(value = "分页", notes = "传入word", position = 3)
-	public R<IPage<WordVO>> page(WordVO word, Query query) {
+	public R<IPage<WordVO>> page(WordDTO word, Query query) {
 		IPage<WordVO> pages = wordService.selectWordPage(Condition.getPage(query), word);
 		return R.success(pages);
 	}
@@ -92,7 +93,7 @@ public class WordController {
 	*/
 	@PostMapping("/save")
 	@ApiOperation(value = "新增", notes = "传入word", position = 4)
-	public R save(@Valid @RequestBody Word word) {
+	public R save(@Valid @RequestBody WordDTO word) {
 		return R.status(wordService.save(word));
 	}
 
@@ -101,7 +102,7 @@ public class WordController {
 	*/
 	@PostMapping("/update")
 	@ApiOperation(value = "修改", notes = "传入word", position = 5)
-	public R update(@Valid @RequestBody Word word) {
+	public R update(@Valid @RequestBody WordDTO word) {
 		return R.status(wordService.updateById(word));
 	}
 
@@ -110,7 +111,7 @@ public class WordController {
 	*/
 	@PostMapping(path = "/submit",consumes = {"application/x-www-form-urlencoded"},produces = {"application/json;charset=UTF-8"})
 	@ApiOperation(value = "新增或修改", notes = "传入word", position = 6)
-	public R submit(@Valid @ModelAttribute Word word) {
+	public R submit(@Valid @ModelAttribute WordDTO word) {
 		return R.status(wordService.saveOrUpdate(word));
 	}
 

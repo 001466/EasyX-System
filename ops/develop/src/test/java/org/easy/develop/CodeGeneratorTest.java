@@ -59,7 +59,7 @@ public class CodeGeneratorTest {
 	/**
 	 * 需要生成的表名(两者只能取其一)
 	 */
-	public static String[] TABLES_INCLUDE = {"word_tag"};
+	public static String[] TABLES_INCLUDE = {"word_typ"};
 	/**
 	 * 需要排除的表名(两者只能取其一)
 	 */

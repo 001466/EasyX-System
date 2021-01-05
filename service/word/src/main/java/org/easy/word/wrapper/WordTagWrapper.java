@@ -14,34 +14,39 @@
  *  this software without specific prior written permission.
  *  Author: Chill 庄骞 (smallchill@163.com)
  */
-package org.easy.word.service;
+package org.easy.word.wrapper;
 
-import org.easy.word.dto.WordDTO;
-import org.easy.word.entity.Word;
-import org.easy.word.vo.WordVO;
-import com.baomidou.mybatisplus.extension.service.IService;
-import com.baomidou.mybatisplus.core.metadata.IPage;
+import lombok.AllArgsConstructor;
 
-import java.util.Collection;
+import org.easy.mybatisplus.support.BaseEntityWrapper;
+import org.easy.tool.util.BeanUtil;
+//import org.easy.system.feign.IDictClient;
+
+import org.easy.word.entity.WordTag;
+import org.easy.word.vo.WordTagVO;
 
 /**
- *  服务类
+ * 包装类,返回视图层所需的字段
  *
  * @author EasyX è±è¯ (240018840@qq.com)
- * @since 2020-12-31
+ * @since 2021-01-05
  */
-public interface IWordService extends IService<Word> {
+@AllArgsConstructor
+public class WordTagWrapper extends BaseEntityWrapper<WordTag, WordTagVO>  {
 
-	/**
-	 * 自定义分页
-	 *
-	 * @param page
-	 * @param word
-	 * @return
-	 */
-	IPage<WordVO> selectWordPage(IPage<WordVO> page, WordDTO word);
+	//private IDictClient dictClient;
 
-	boolean saveOrUpdate(WordDTO entity);
+	@Override
+	public WordTagVO entityVO(WordTag wordTag) {
+		WordTagVO wordTagVO = BeanUtil.copy(wordTag, WordTagVO.class);
 
+		/*R<String> dict = dictClient.getValue("wordTag" , wordTagVO.getCategory());
+		if (dict.isSuccess()) {
+			String categoryName = dict.getData();
+			wordTagVO.setCategoryName(categoryName);
+		}*/
+
+		return wordTagVO;
+	}
 
 }

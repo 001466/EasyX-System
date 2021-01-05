@@ -16,32 +16,26 @@
  */
 package org.easy.word.service;
 
-import org.easy.word.dto.WordDTO;
-import org.easy.word.entity.Word;
-import org.easy.word.vo.WordVO;
+import org.easy.word.entity.WordTag;
+import org.easy.word.vo.WordTagVO;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.baomidou.mybatisplus.core.metadata.IPage;
-
-import java.util.Collection;
 
 /**
  *  服务类
  *
  * @author EasyX è±è¯ (240018840@qq.com)
- * @since 2020-12-31
+ * @since 2021-01-05
  */
-public interface IWordService extends IService<Word> {
+public interface IWordTagService extends IService<WordTag> {
 
 	/**
 	 * 自定义分页
 	 *
 	 * @param page
-	 * @param word
+	 * @param wordTag
 	 * @return
 	 */
-	IPage<WordVO> selectWordPage(IPage<WordVO> page, WordDTO word);
-
-	boolean saveOrUpdate(WordDTO entity);
-
+	IPage<WordTagVO> selectWordTagPage(IPage<WordTagVO> page, WordTagVO wordTag);
 
 }

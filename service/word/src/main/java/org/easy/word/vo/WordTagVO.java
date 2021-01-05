@@ -14,34 +14,23 @@
  *  this software without specific prior written permission.
  *  Author: Chill 庄骞 (smallchill@163.com)
  */
-package org.easy.word.service;
+package org.easy.word.vo;
 
-import org.easy.word.dto.WordDTO;
-import org.easy.word.entity.Word;
-import org.easy.word.vo.WordVO;
-import com.baomidou.mybatisplus.extension.service.IService;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-
-import java.util.Collection;
+import org.easy.word.entity.WordTag;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import io.swagger.annotations.ApiModel;
 
 /**
- *  服务类
+ * 视图实体类
  *
  * @author EasyX è±è¯ (240018840@qq.com)
- * @since 2020-12-31
+ * @since 2021-01-05
  */
-public interface IWordService extends IService<Word> {
-
-	/**
-	 * 自定义分页
-	 *
-	 * @param page
-	 * @param word
-	 * @return
-	 */
-	IPage<WordVO> selectWordPage(IPage<WordVO> page, WordDTO word);
-
-	boolean saveOrUpdate(WordDTO entity);
-
+@Data
+@EqualsAndHashCode(callSuper = true)
+@ApiModel(value = "WordTagVO对象", description = "WordTagVO对象")
+public class WordTagVO extends WordTag {
+	private static final long serialVersionUID = 1L;
 
 }

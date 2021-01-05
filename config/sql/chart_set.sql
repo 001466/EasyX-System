@@ -1,0 +1,2 @@
+ALTER DATABASE test_word(库名) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+ALTER TABLE word(表名) CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;

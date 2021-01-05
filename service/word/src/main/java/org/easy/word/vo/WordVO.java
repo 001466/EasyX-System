@@ -32,5 +32,6 @@ import io.swagger.annotations.ApiModel;
 @ApiModel(value = "WordVO对象", description = "WordVO对象")
 public class WordVO extends Word {
 	private static final long serialVersionUID = 1L;
-
+	private String tag;
+	private String typ;
 }

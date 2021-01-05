@@ -14,34 +14,28 @@
  *  this software without specific prior written permission.
  *  Author: Chill 庄骞 (smallchill@163.com)
  */
-package org.easy.word.service;
+package org.easy.word.service.impl;
 
-import org.easy.word.dto.WordDTO;
-import org.easy.word.entity.Word;
-import org.easy.word.vo.WordVO;
-import com.baomidou.mybatisplus.extension.service.IService;
+import org.easy.word.entity.WordTag;
+import org.easy.word.vo.WordTagVO;
+import org.easy.word.mapper.WordTagMapper;
+import org.easy.word.service.IWordTagService;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.stereotype.Service;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 
-import java.util.Collection;
-
 /**
- *  服务类
+ *  服务实现类
  *
  * @author EasyX è±è¯ (240018840@qq.com)
- * @since 2020-12-31
+ * @since 2021-01-05
  */
-public interface IWordService extends IService<Word> {
+@Service
+public class WordTagServiceImpl extends ServiceImpl<WordTagMapper, WordTag> implements IWordTagService {
 
-	/**
-	 * 自定义分页
-	 *
-	 * @param page
-	 * @param word
-	 * @return
-	 */
-	IPage<WordVO> selectWordPage(IPage<WordVO> page, WordDTO word);
-
-	boolean saveOrUpdate(WordDTO entity);
-
+	@Override
+	public IPage<WordTagVO> selectWordTagPage(IPage<WordTagVO> page, WordTagVO wordTag) {
+		return page.setRecords(baseMapper.selectWordTagPage(page, wordTag));
+	}
 
 }

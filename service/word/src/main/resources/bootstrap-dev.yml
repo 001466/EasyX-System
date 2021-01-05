@@ -1,0 +1,11 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        namespace: cec0ab23-ff91-4d9c-a70d-c14d47c93100
+        server-addr: 47.108.150.218:8848
+      config:
+        namespace: cec0ab23-ff91-4d9c-a70d-c14d47c93100
+        server-addr: 47.108.150.218:8848

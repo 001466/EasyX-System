@@ -3,9 +3,11 @@
 <mapper namespace="org.easy.word.mapper.WordMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="wordResultMap" type="org.easy.word.entity.Word">
+    <resultMap id="wordResultMap" type="org.easy.word.vo.WordVO">
         <id column="id" property="id"/>
         <result column="text" property="text"/>
+        <result column="tag" property="tag"/>
+        <result column="typ" property="typ"/>
         <result column="is_deleted" property="isDeleted"/>
         <result column="enabled" property="enabled"/>
         <result column="create_user" property="createUser"/>
@@ -16,7 +18,23 @@
 
 
     <select id="selectWordPage" resultMap="wordResultMap">
-        select * from word where is_deleted = 0
+        select
+            word.*,word_typ.typ,word_tag.tag
+        from
+            word
+        left join
+            word_typ on (word.id=word_typ.word_id )
+        left join
+            word_tag on (word.id=word_tag.word_id )
+        where
+            is_deleted = 0
+        <if test="word.typ !=null and word.typ !=''  ">
+            and word_typ.typ = #{word.typ}
+        </if>
+        <if test="word.tag !=null and word.tag !=''">
+            and word_tag.tag = #{word.tag}
+        </if>
+
     </select>
 
 </mapper>

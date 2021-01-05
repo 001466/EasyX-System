@@ -30,5 +30,6 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = true)
 public class WordDTO extends Word {
 	private static final long serialVersionUID = 1L;
-
+	private String tag;
+	private String typ;
 }

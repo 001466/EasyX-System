@@ -14,34 +14,39 @@
  *  this software without specific prior written permission.
  *  Author: Chill 庄骞 (smallchill@163.com)
  */
-package org.easy.word.service;
+package org.easy.word.entity;
 
-import org.easy.word.dto.WordDTO;
-import org.easy.word.entity.Word;
-import org.easy.word.vo.WordVO;
-import com.baomidou.mybatisplus.extension.service.IService;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-
-import java.util.Collection;
+import java.time.LocalDateTime;
+import java.io.Serializable;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 /**
- *  服务类
+ * 实体类
  *
  * @author EasyX è±è¯ (240018840@qq.com)
- * @since 2020-12-31
+ * @since 2021-01-05
  */
-public interface IWordService extends IService<Word> {
+@Data
+@ApiModel(value = "WordTag对象", description = "WordTag对象")
+public class WordTag implements Serializable {
 
-	/**
-	 * 自定义分页
-	 *
-	 * @param page
-	 * @param word
-	 * @return
-	 */
-	IPage<WordVO> selectWordPage(IPage<WordVO> page, WordDTO word);
+    private static final long serialVersionUID = 1L;
 
-	boolean saveOrUpdate(WordDTO entity);
+  private Integer wordId;
+  private String tag;
+    /**
+     * 创建人
+     */
+    @ApiModelProperty(value = "创建人")
+    private Long createUser;
+    /**
+     * 创建时间
+     */
+    @ApiModelProperty(value = "创建时间")
+    private LocalDateTime createTime;
 
 
 }

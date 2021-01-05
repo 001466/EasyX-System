@@ -16,6 +16,8 @@
  */
 package org.easy.word.mapper;
 
+import org.apache.ibatis.annotations.Param;
+import org.easy.word.dto.WordDTO;
 import org.easy.word.entity.Word;
 import org.easy.word.vo.WordVO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
@@ -37,6 +39,6 @@ public interface WordMapper extends BaseMapper<Word> {
 	 * @param word
 	 * @return
 	 */
-	List<WordVO> selectWordPage(IPage page, WordVO word);
+	List<WordVO> selectWordPage(IPage page, @Param("word")WordDTO word);
 
 }
