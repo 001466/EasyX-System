@@ -19,9 +19,6 @@ spring:
         ext-config:
           - {data-id: gateway.yaml,group: DEFAULT_GROUP,refresh: true}
           - {data-id: blade.yaml,group: DEFAULT_GROUP,refresh: false}
-   
-
-
 logging:
   path: logs
   file: logs/${spring.application.name}.log

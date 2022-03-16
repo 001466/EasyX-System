@@ -1,0 +1,13 @@
+
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        namespace: e59ae1ed-59ad-4adb-8a77-5970dbe3e826
+        server-addr: deocean.iot.nacos
+      config:
+        namespace: e59ae1ed-59ad-4adb-8a77-5970dbe3e826
+        server-addr: deocean.iot.nacos

@@ -4,6 +4,7 @@ import io.netty.util.internal.StringUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.easy.gateway.jwt.JwtOAuth2AuthenticationTokenConverter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;
@@ -20,8 +21,11 @@ import org.springframework.security.config.web.server.ServerHttpSecurity;
 import org.springframework.security.web.server.SecurityWebFilterChain;
 import org.springframework.security.web.server.authorization.ServerAccessDeniedHandler;
 import org.springframework.security.web.server.context.ServerSecurityContextRepository;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
+
+import java.util.List;
 
 
 @Slf4j
@@ -52,8 +56,9 @@ public class SecurityConfiguration {
 		http.csrf().disable();
 		//http.logout().disable();
 
+		http.authorizeExchange().pathMatchers("/actuator/**","/login/**","/auth/**","/oauth/**","/word/**").permitAll();
 
-		http.authorizeExchange().pathMatchers("/proxy-tuya/*","/proxy-weiguo/seneor/notify","/proxy-weiguo/event/notify","/blade-notify/msg/**","/atom-file/resource/**","/blade-auth/login/**","/blade-auth/oauth/**","/actuator/**", "/login","/login/**", "/auth/**", "/oauth/**","/blade-user/account/**","/blade-user/api/account/**").permitAll();
+
 
 		http.authorizeExchange().anyExchange().authenticated();
 
